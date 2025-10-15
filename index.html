@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jubilee Mission College of Nursing</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Tailwind Configuration for Colors and Font */
+        :root {
+            --color-primary: #990000; /* Dark Red/Maroon for accents */
+            --color-secondary: #330033; /* Dark Purple for Navbar */
+            --color-footer: #2b2b2b; /* Dark background for footer */
+        }
+        
+        /* Customizing Tailwind with Inter font */
+        html { font-family: 'Inter', sans-serif; }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .bg-secondary { background-color: var(--color-secondary); }
+        .bg-footer { background-color: var(--color-footer); }
+
+        /* Custom style for the hero banner to ensure text is legible */
+        .hero-banner {
+            background-image: url('https://placehold.co/1920x800/f0f0f0/333333?text=Students+in+Classroom+Placeholder');
+            background-size: cover;
+            background-position: center;
+            height: 70vh; /* Responsive height */
+            position: relative;
+        }
+
+        /* Gradient overlay to help text readability */
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.1) 70%);
+        }
+
+        /* Custom text alignment for program titles */
+        .program-title {
+            background-color: var(--color-secondary);
+            color: white;
+            text-align: center;
+            padding: 0.75rem 0;
+            font-weight: 600;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#990000',
+                        secondary: '#330033',
+                        footer: '#2b2b2b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<!-- 1. Top Contact Bar (Red) -->
+<header class="bg-primary text-white text-sm hidden lg:block">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <!-- Contact Info -->
+        <div class="flex space-x-6">
+            <span class="flex items-center"><i class="fas fa-phone mr-2"></i> +91 9998543333</span>
+            <span class="flex items-center"><i class="fas fa-envelope mr-2"></i> jubilee123@gmail.com</span>
+            <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Bangalore - 560072</span>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4">
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- 2. Main Navigation Bar (Dark Purple) -->
+<nav class="bg-secondary shadow-lg">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
+                <!-- Placeholder Logo - Replace with actual image or use a logo image path -->
+                <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary text-2xl font-serif mr-2">J</div>
+                <div class="leading-none">
+                    <span class="text-xs block">JUBILEE MISSION</span>
+                    <span class="text-lg block">College</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden lg:flex items-center space-x-8 text-white">
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Home</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">About Us</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Courses</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Gallery</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Blogs</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Facilities</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Contact us</a>
+            </div>
+
+            <!-- Admission Open Button -->
+            <a href="#" class="bg-primary hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
+                ADMISSION OPEN
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
+        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Home</a>
+        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">About Us</a>
+        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Courses</a>
+        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Gallery</a>
+        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Blogs</a>
+        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Facilities</a>
+        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Contact us</a>
+        <a href="#" class="block bg-primary text-center text-white py-3 font-semibold hover:bg-red-700">ADMISSION OPEN</a>
+    </div>
+</nav>
+
+<!-- 3. Hero Section -->
+<main>
+    <section class="hero-banner">
+        <div class="container mx-auto px-4 flex items-center h-full relative z-10">
+            <div class="w-full md:w-1/2 p-6 md:p-0">
+                <p class="text-lg text-primary font-semibold mb-2">
+                    Become a Nurse at the
+                </p>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-[#501313] leading-tight mb-6">
+                    Best Nursing College in Bangalore
+                </h1>
+                <p class="text-gray-700 mb-8 max-w-lg">
+                    JMCN is a leading nursing college in Bangalore, committed to providing exceptional education that prepares students for successful careers in the ever-evolving healthcare industry.
+                </p>
+                <a href="#" class="inline-block bg-primary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
+                    About Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Programs Offered Section (New) -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-primary text-center mb-12">
+                PROGRAMS OFFERED
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- BSc Nursing Card -->
+                <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img 
+                        src="https://placehold.co/600x400/330033/ffffff?text=BSc+Nursing+Student" 
+                        alt="BSc Nursing Student" 
+                        class="w-full h-auto object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=BSc+Nursing';"
+                    >
+                    <div class="program-title text-xl">BSc Nursing</div>
+                </div>
+
+                <!-- GNM Card -->
+                <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img 
+                        src="https://placehold.co/600x400/990000/ffffff?text=GNM+Student" 
+                        alt="GNM Student" 
+                        class="w-full h-auto object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/990000/ffffff?text=GNM';"
+                    >
+                    <div class="program-title text-xl">GNM</div>
+                </div>
+
+                <!-- PBBSc Nursing Card -->
+                <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img 
+                        src="https://placehold.co/600x400/330033/ffffff?text=PBBSc+Nursing+Student" 
+                        alt="PBBSc Nursing Student" 
+                        class="w-full h-auto object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=PBBSc+Nursing';"
+                    >
+                    <div class="program-title text-xl">PBBSc Nursing</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Chairman's Desk Section (Moved from 4 to 5) -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-start lg:space-x-12">
+                
+                <!-- Chairman's Image Card (Left Column) -->
+                <div class="lg:w-1/3 w-full mb-8 lg:mb-0">
+                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden p-6 border-t-8 border-primary">
+                        <img 
+                            src="https://placehold.co/400x400/808080/ffffff?text=Mr.+Dennis+T+Varghese" 
+                            alt="Mr. Dennis T Varghese, Chairman" 
+                            class="w-full h-auto object-cover rounded-lg mb-4"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x400/808080/ffffff?text=Chairman+Image';"
+                        >
+                        <div class="text-center">
+                            <h2 class="text-xl font-bold text-gray-800">Mr. Dennis T Varghese</h2>
+                            <p class="text-primary text-sm mt-1">Chairman, Jubilee Mission College of Nursing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chairman's Message (Right Column) -->
+                <div class="lg:w-2/3 w-full">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-8 border-b-4 border-primary inline-block pb-1">
+                        CHAIRMAN'S DESK
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-700 text-lg">
+                        <p>
+                            Dear All,
+                        </p>
+                        <p>
+                            At JMCN, we're dedicated to excellence in nursing education. Our programs, including BSc. Nursing and potentially GNM, offer a high-quality learning experience. Affiliated with Rajiv Gandhi University of Health Sciences, Bangalore, our qualifications are recognized nationwide.
+                        </p>
+                        <p>
+                            As a leading nursing college in Bangalore, we prioritize values like compassion and competence. Approved by the Indian Nursing Council (INC), our education meets national standards, preparing students for successful nursing careers. Join our transformative community at JMCN and excel in the field of nursing.
+                        </p>
+                        <p>
+                            Thank you for being part of our journey towards excellence in nursing education.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 text-gray-800">
+                        <p class="text-sm font-semibold">Warm regards,</p>
+                        <p class="text-lg font-bold">Dennis T Varghese</p>
+                        <p class="text-sm">Chairman, JMCN</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- 6. Footer Section (Updated) -->
+<footer class="bg-footer text-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+            
+            <!-- Column 1: Logo and About -->
+            <div class="space-y-4">
+                 <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
+                    <!-- Placeholder Logo - Replace with actual image -->
+                    <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary text-2xl font-serif mr-2">J</div>
+                    <div class="leading-none">
+                        <span class="text-xs block">JUBILEE MISSION</span>
+                        <span class="text-lg block">College</span>
+                    </div>
+                </a>
+                <p class="text-sm text-gray-400">
+                    Join us for BSc. Nursing and GNM programs in Bangalore. Accredited by the INC and affiliated with Rajiv Gandhi University of Health Sciences, our curriculum emphasises compassion, competence, and ethical practice. Explore your potential in nursing with us today!
+                </p>
+            </div>
+
+            <!-- Column 2: Student Help -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ADMISSION</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT US</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> FACILITIES</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> GALLERY</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">QUICK LINKS</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> PLACEMENTS</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITAL</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> INTERNSHIP</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> SOFT SKILLS LAB</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> TEACHING FACULTY</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Us -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">CONTACT US</h3>
+                <div class="space-y-4 text-sm text-gray-400">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-primary mt-1 mr-3 flex-shrink-0"></i>
+                        <p>#81, 3rd Cross, Near Fortis Hospital, Nagarbhavi, Bangalore - 560072</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-primary mr-3"></i>
+                        <p>+91 9998543333</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-primary mr-3"></i>
+                        <p>jubilee123@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
+            <p>&copy; Copyright Jubilee 2024. All rights reserved. 
+                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary">Privacy Policy</a></span>
+                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary">Terms Of Service</a></span>
+                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary">Legal</a></span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // JavaScript for mobile menu toggling
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        // Toggle max-h classes for smooth transition
+        if (menu.classList.contains('max-h-0')) {
+            menu.classList.remove('max-h-0');
+            menu.classList.add('max-h-screen');
+        } else {
+            menu.classList.remove('max-h-screen');
+            menu.classList.add('max-h-0');
+        }
+    });
+</script>
+
+</body>
+</html>
