@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jubilee Mission Group of Institutions</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Custom Tailwind Configuration for Colors and Font */
@@ -64,16 +62,13 @@
 </head>
 <body>
 
-<!-- 1. Top Contact Bar (Red) -->
 <header class="bg-primary text-white text-sm hidden lg:block">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-        <!-- Contact Info -->
         <div class="flex space-x-6">
             <span class="flex items-center"><i class="fas fa-phone mr-2"></i> +91 9986433333</span>
             <span class="flex items-center"><i class="fas fa-envelope mr-2"></i> jubileem123@gmail.com</span>
             <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Bangalore - 560072</span>
         </div>
-        <!-- Social Media Icons -->
         <div class="flex space-x-4">
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-twitter"></i></a>
@@ -83,21 +78,17 @@
     </div>
 </header>
 
-<!-- 2. Main Navigation Bar (Dark Purple) -->
 <nav class="bg-secondary shadow-lg">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center h-20">
-            <!-- Logo -->
+        <div class="flex justify-between items-center h-24"> 
             <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
                 <img 
                     src="logo.png" 
                     alt="Jubilee Mission College Logo" 
-                    class="w-24 h-24 object-contain rounded-full"
-                    onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
+                    class="w-24 h-24 object-contain rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
                 >
             </a>
 
-            <!-- Navigation Links (Desktop) -->
             <div class="hidden lg:flex items-center space-x-8 text-white">
                 <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
                 <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">About Us</a>
@@ -108,19 +99,16 @@
                 <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Contact us</a>
             </div>
 
-            <!-- Admission Open Button -->
             <a href="#" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
                 ADMISSION OPEN
             </a>
             
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu (Hidden by default) -->
     <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
         <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
         <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">About Us</a>
@@ -133,28 +121,19 @@
     </div>
 </nav>
 
-<!-- 3. Hero Section - FIX APPLIED HERE -->
 <main>
     <section class="hero-banner">
         <div class="container mx-auto px-4 flex items-center h-full relative z-10">
-            <!-- 
-                FIX: Replaced w-3/5 with w-full max-w-xl for better mobile width and readability.
-                Added bg-white/90, rounded-xl, shadow-lg, and padding (p-6) for mobile contrast/aesthetics.
-                Reverted those changes on medium screens (md: prefix) to maintain the original desktop design.
-            -->
             <div class="w-full max-w-xl p-6 bg-white/90 rounded-xl shadow-lg md:bg-transparent md:shadow-none md:rounded-none md:p-0 md:w-1/2 md:max-w-none"> 
                 
-                <!-- Tagline (1 line) -->
                 <p class="text-base text-primary font-semibold mb-2">
                     Build your career in healthcare with
                 </p>
                 
-                <!-- Main Heading (2 lines) -->
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-secondary leading-tight mb-6">
                     Jubilee Mission Group of Institutions,<br>Bangalore
                 </h1>
                 
-                <!-- Paragraph -->
                 <p class="text-gray-700 mb-8 max-w-lg">
                     Jubilee Mission Group of Institutions is a premier hub for Nursing, Physiotherapy, and Allied Health Sciences education in Bangalore. We are dedicated to nurturing skilled and compassionate healthcare professionals ready to excel in a dynamic global healthcare environment.
                 </p>
@@ -166,58 +145,57 @@
         </div>
     </section>
 
-    <!-- 4. Programs Offered Section -->
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl md:text-5xl font-extrabold text-secondary text-center mb-12">
                 ACADEMIC PROGRAMS OFFERED
             </h2>
             
-            <!-- Grid updated: Contains only 3 consolidated cards now (Nursing, BPT, Allied Health) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Card 1: Nursing (Consolidated) -->
                 <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 cursor-pointer">
-                    <img 
-                        src="nursing_programs.jpg" 
-                        alt="Comprehensive Nursing Programs" 
-                        class="w-full h-auto object-cover"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=Nursing+Programs';"
-                    >
+                    <div class="w-full h-64 overflow-hidden">
+                        <img 
+                            src="nursing_programs.jpg" 
+                            alt="Comprehensive Nursing Programs" 
+                            class="w-full h-full object-cover" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=Nursing+Programs';"
+                        >
+                    </div>
                     <div class="program-title text-xl">NURSING</div>
                 </div>
 
-                <!-- Card 2: BPT (Physiotherapy) -->
                 <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 cursor-pointer">
-                    <img 
-                        src="bpt_student.png" 
-                        alt="BPT Physiotherapy Student" 
-                        class="w-full h-auto object-cover"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/990000/ffffff?text=BPT+Physiotherapy';"
-                    >
+                    <div class="w-full h-64 overflow-hidden">
+                        <img 
+                            src="bpt_student.png" 
+                            alt="BPT Physiotherapy Student" 
+                            class="w-full h-full object-cover" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/990000/ffffff?text=BPT+Physiotherapy';"
+                        >
+                    </div>
                     <div class="program-title text-xl">BPT (Physiotherapy)</div>
                 </div>
 
-                <!-- Card 3: B.Sc. Allied Health Sciences -->
                 <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 cursor-pointer">
-                    <img 
-                        src="allied_health.jpg" 
-                        alt="Allied Health Sciences Student" 
-                        class="w-full h-auto object-cover"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=Allied+Health+Sciences';"
-                    >
+                    <div class="w-full h-64 overflow-hidden">
+                        <img 
+                            src="allied_health.jpg" 
+                            alt="Allied Health Sciences Student" 
+                            class="w-full h-full object-cover" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=Allied+Health+Sciences';"
+                        >
+                    </div>
                     <div class="program-title text-xl">B.Sc. Allied Health Sciences</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Chairman's Desk Section -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-start lg:space-x-12">
                 
-                <!-- Chairman's Image Card (Left Column) -->
                 <div class="lg:w-1/3 w-full mb-8 lg:mb-0">
                     <div class="bg-white rounded-xl shadow-2xl overflow-hidden p-6 border-t-8 border-primary">
                         <img 
@@ -233,7 +211,6 @@
                     </div>
                 </div>
 
-                <!-- Chairman's Message (Right Column) -->
                 <div class="lg:w-2/3 w-full">
                     <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-8 border-b-4 border-primary inline-block pb-1">
                         CHAIRMAN'S DESK
@@ -244,7 +221,7 @@
                             Dear All,
                         </p>
                         <p>
-                            At <strong>JMCN</strong>, we're dedicated to excellence in nursing education. Our programs, including BSc. Nursing and potentially GNM, offer a high-quality learning experience. Affiliated with <strong>Rajiv Gandhi University of Health Sciences, Bangalore</strong>, our qualifications are recognized nationwide.
+                            At **JMCN**, we're dedicated to excellence in nursing education. Our programs, including BSc. Nursing and potentially GNM, offer a high-quality learning experience. Affiliated with **Rajiv Gandhi University of Health Sciences, Bangalore**, our qualifications are recognized nationwide.
                         </p>
                         <p>
                             As a leading nursing college in Bangalore, we prioritize values like compassion and competence. Approved by the **Indian Nursing Council (INC)**, our education meets national standards, preparing students for successful nursing careers. Join our transformative community at JMCN and excel in the field of nursing.
@@ -266,12 +243,10 @@
     </section>
 </main>
 
-<!-- 6. Footer Section -->
 <footer class="bg-footer text-white py-10">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
             
-            <!-- Column 1: Logo and About -->
             <div class="space-y-4">
                  <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
                     <img 
@@ -292,7 +267,6 @@
                 </div>
             </div>
 
-            <!-- Column 2: Student Help -->
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
                 <ul class="space-y-2 text-sm">
@@ -305,7 +279,6 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Quick Links -->
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">QUICK LINKS</h3>
                 <ul class="space-y-2 text-sm">
@@ -319,7 +292,6 @@
                 </ul>
             </div>
 
-            <!-- Column 4: Contact Us -->
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">CONTACT US</h3>
                 <div class="space-y-4 text-sm text-gray-400">
@@ -340,7 +312,6 @@
 
         </div>
 
-        <!-- Footer Bottom Bar -->
         <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
             <p>&copy; Copyright Jubilee 2024. All rights reserved. 
                 <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
