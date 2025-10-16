@@ -21,12 +21,14 @@
         .bg-primary { background-color: var(--color-primary); }
         .text-primary { color: var(--color-primary); }
         .bg-secondary { background-color: var(--color-secondary); }
+        .text-secondary { color: var(--color-secondary); } /* Added utility for text color */
         .bg-footer { background-color: var(--color-footer); }
 
         /* Custom style for the hero banner to ensure text is legible */
         .hero-banner {
-            /* CORRECTED: Removed 'images/' prefix and changed to .png */
+            /* Using a relative path, relying on onerror fallbacks for robustness */
             background-image: url('hero_banner.png');
+            background-color: #f7f7f7; /* Background fallback color */
             background-size: cover;
             background-position: center;
             height: 70vh; /* Responsive height */
@@ -41,6 +43,7 @@
             right: 0;
             bottom: 0;
             left: 0;
+            /* White fade-out from left for text contrast */
             background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.1) 70%);
         }
 
@@ -83,10 +86,10 @@
         </div>
         <!-- Social Media Icons -->
         <div class="flex space-x-4">
-            <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
 </header>
@@ -97,28 +100,27 @@
         <div class="flex justify-between items-center h-20">
             <!-- Logo -->
             <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
-                <!-- CORRECTED: Removed 'images/' prefix -->
                 <img 
                     src="logo.png" 
                     alt="Jubilee Mission College Logo" 
-                    class="w-20 h-20 object-contain"
+                    class="w-20 h-20 object-contain rounded-full"
                     onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
                 >
             </a>
 
             <!-- Navigation Links (Desktop) -->
             <div class="hidden lg:flex items-center space-x-8 text-white">
-                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Home</a>
-                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">About Us</a>
-                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Courses</a>
-                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Gallery</a>
-                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Blogs</a>
-                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Facilities</a>
-                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300">Contact us</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">About Us</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Courses</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Gallery</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Blogs</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Facilities</a>
+                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Contact us</a>
             </div>
 
             <!-- Admission Open Button -->
-            <a href="#" class="bg-primary hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
+            <a href="#" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
                 ADMISSION OPEN
             </a>
             
@@ -131,14 +133,14 @@
 
     <!-- Mobile Menu (Hidden by default) -->
     <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
-        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Home</a>
-        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">About Us</a>
-        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Courses</a>
-        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Gallery</a>
-        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Blogs</a>
-        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Facilities</a>
-        <a href="#" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Contact us</a>
-        <a href="#" class="block bg-primary text-center text-white py-3 font-semibold hover:bg-red-700">ADMISSION OPEN</a>
+        <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
+        <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">About Us</a>
+        <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Courses</a>
+        <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Gallery</a>
+        <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Blogs</a>
+        <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Facilities</a>
+        <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Contact us</a>
+        <a href="#" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
     </div>
 </nav>
 
@@ -150,69 +152,67 @@
                 <p class="text-lg text-primary font-semibold mb-2">
                     Build Your Career in Healthcare with
                 </p>
-                <h1 class="text-5xl md:text-6xl font-extrabold text-[#501313] leading-tight mb-6">
+                <!-- FIX: Reduced font size for mobile (from text-5xl to text-4xl) to prevent horizontal overflow -->
+                <h1 class="text-4xl md:text-6xl font-extrabold text-secondary leading-tight mb-6">
                     Jubilee Mission Group of Institutions, Bangalore
                 </h1>
                 <p class="text-gray-700 mb-8 max-w-lg">
-                    Jubilee Mission Group of Institutions is a premier hub for Nursing, Physiotherapy, and Allied Health Sciences education in Bangalore. We are dedicated to nurturing skilled and compassionate healthcare professionals ready to excel in a dynamic global healthcare environment.
+                    Jubilee Mission Group of Institutions is a premier hub for **Nursing, Physiotherapy, and Allied Health Sciences** education in Bangalore. We are dedicated to nurturing skilled and compassionate healthcare professionals ready to excel in a dynamic global healthcare environment.
                 </p>
                 <a href="#" class="inline-block bg-primary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
-                    About Us
+                    Explore Our Campus
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 4. Programs Offered Section (New) -->
+    <!-- 4. Programs Offered Section -->
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-primary text-center mb-12">
-                PROGRAMS OFFERED
+            <h2 class="text-4xl md:text-5xl font-extrabold text-secondary text-center mb-12">
+                ACADEMIC PROGRAMS OFFERED
             </h2>
             
+            <!-- Updated Grid: Contains only 3 consolidated cards now (Nursing, BPT, Allied Health) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- BSc Nursing Card -->
-                <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <!-- CORRECTED: Removed 'images/' prefix and changed to .png -->
+                <!-- NEW Card 1: Nursing (Consolidated) -->
+                <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 cursor-pointer">
                     <img 
-                        src="bsc_student.png" 
-                        alt="BSc Nursing Student" 
+                        src="nursing_programs.png" 
+                        alt="Comprehensive Nursing Programs" 
                         class="w-full h-auto object-cover"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=BSc+Nursing';"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=Nursing+Programs';"
                     >
-                    <div class="program-title text-xl">BSc Nursing</div>
+                    <div class="program-title text-xl">NURSING</div>
                 </div>
 
-                <!-- GNM Card -->
-                <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <!-- CORRECTED: Removed 'images/' prefix and changed to .png -->
+                <!-- Card 2: BPT (Physiotherapy) -->
+                <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 cursor-pointer">
                     <img 
-                        src="gnm_student.png" 
-                        alt="GNM Student" 
+                        src="bpt_student.png" 
+                        alt="BPT Physiotherapy Student" 
                         class="w-full h-auto object-cover"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/990000/ffffff?text=GNM';"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/990000/ffffff?text=BPT+Physiotherapy';"
                     >
-                    <div class="program-title text-xl">GNM</div>
+                    <div class="program-title text-xl">BPT (Physiotherapy)</div>
                 </div>
 
-                <!-- PBBSc Nursing Card -->
-                <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300">
-                    <!-- CORRECTED: Removed 'images/' prefix and changed to .png -->
+                <!-- Card 3: B.Sc. Allied Health Sciences -->
+                <div class="rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-300 cursor-pointer">
                     <img 
-                        src="pbbsc_student.png" 
-                        alt="PBBSc Nursing Student" 
+                        src="allied_health.png" 
+                        alt="Allied Health Sciences Student" 
                         class="w-full h-auto object-cover"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=PBBSc+Nursing';"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/330033/ffffff?text=Allied+Health+Sciences';"
                     >
-                    <div class="program-title text-xl">PBBSc Nursing</div>
+                    <div class="program-title text-xl">B.Sc. Allied Health Sciences</div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- 5. Chairman's Desk Section (Moved from 4 to 5) -->
+    <!-- 5. Chairman's Desk Section -->
     <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-start lg:space-x-12">
@@ -220,7 +220,6 @@
                 <!-- Chairman's Image Card (Left Column) -->
                 <div class="lg:w-1/3 w-full mb-8 lg:mb-0">
                     <div class="bg-white rounded-xl shadow-2xl overflow-hidden p-6 border-t-8 border-primary">
-                        <!-- CORRECTED: Removed 'images/' prefix -->
                         <img 
                             src="chairman.jpg" 
                             alt="Mr. Dennis T Varghese, Chairman" 
@@ -236,7 +235,7 @@
 
                 <!-- Chairman's Message (Right Column) -->
                 <div class="lg:w-2/3 w-full">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-8 border-b-4 border-primary inline-block pb-1">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-8 border-b-4 border-primary inline-block pb-1">
                         CHAIRMAN'S DESK
                     </h2>
                     
@@ -245,10 +244,10 @@
                             Dear All,
                         </p>
                         <p>
-                            At JMCN, we're dedicated to excellence in nursing education. Our programs, including BSc. Nursing and potentially GNM, offer a high-quality learning experience. Affiliated with Rajiv Gandhi University of Health Sciences, Bangalore, our qualifications are recognized nationwide.
+                            At **JMCN**, we're dedicated to excellence in nursing education. Our programs, including BSc. Nursing and potentially GNM, offer a high-quality learning experience. Affiliated with **Rajiv Gandhi University of Health Sciences, Bangalore**, our qualifications are recognized nationwide.
                         </p>
                         <p>
-                            As a leading nursing college in Bangalore, we prioritize values like compassion and competence. Approved by the Indian Nursing Council (INC), our education meets national standards, preparing students for successful nursing careers. Join our transformative community at JMCN and excel in the field of nursing.
+                            As a leading nursing college in Bangalore, we prioritize values like compassion and competence. Approved by the **Indian Nursing Council (INC)**, our education meets national standards, preparing students for successful nursing careers. Join our transformative community at JMCN and excel in the field of nursing.
                         </p>
                         <p>
                             Thank you for being part of our journey towards excellence in nursing education.
@@ -267,7 +266,7 @@
     </section>
 </main>
 
-<!-- 6. Footer Section (Updated) -->
+<!-- 6. Footer Section -->
 <footer class="bg-footer text-white py-10">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -275,29 +274,34 @@
             <!-- Column 1: Logo and About -->
             <div class="space-y-4">
                  <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
-                    <!-- CORRECTED: Removed 'images/' prefix -->
                     <img 
                         src="logo.png" 
                         alt="Jubilee Mission College Logo" 
-                        class="w-20 h-20 object-contain"
+                        class="w-20 h-20 object-contain rounded-full"
                         onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
                     >
                 </a>
                 <p class="text-sm text-gray-400">
-                    Join us for BSc. Nursing and GNM programs in Bangalore. Accredited by the INC and affiliated with Rajiv Gandhi University of Health Sciences, our curriculum emphasises compassion, competence, and ethical practice. Explore your potential in nursing with us today!
+                    Join us for BSc. Nursing and GNM programs in Bangalore. Accredited by the **INC** and affiliated with **Rajiv Gandhi University of Health Sciences**, our curriculum emphasises compassion, competence, and ethical practice. Explore your potential in nursing with us today!
                 </p>
+                <div class="flex space-x-4 pt-2">
+                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-facebook-f text-white"></i></a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-twitter text-white"></i></a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-instagram text-white"></i></a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-youtube text-white"></i></a>
+                </div>
             </div>
 
             <!-- Column 2: Student Help -->
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ADMISSION</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT US</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> FACILITIES</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> GALLERY</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ADMISSION</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT US</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> FACILITIES</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> GALLERY</a></li>
                 </ul>
             </div>
 
@@ -305,13 +309,13 @@
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">QUICK LINKS</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> PLACEMENTS</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITAL</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> INTERNSHIP</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> SOFT SKILLS LAB</a></li>
-                    <li><a href="#" class="hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> TEACHING FACULTY</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> PLACEMENTS</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITAL</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> INTERNSHIP</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> SOFT SKILLS LAB</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> TEACHING FACULTY</a></li>
                 </ul>
             </div>
 
@@ -339,9 +343,9 @@
         <!-- Footer Bottom Bar -->
         <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
             <p>&copy; Copyright Jubilee 2024. All rights reserved. 
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary">Privacy Policy</a></span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary">Terms Of Service</a></span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary">Legal</a></span>
+                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
+                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Terms Of Service</a></span>
+                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Legal</a></span>
             </p>
         </div>
     </div>
