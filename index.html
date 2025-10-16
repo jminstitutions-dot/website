@@ -34,8 +34,16 @@
             height: 70vh; /* Responsive height */
             position: relative;
         }
-
-        /* REMOVED: .text-contrast since we are using the background box */
+        
+        /* NEW: Class to create the white background strip behind each line of text */
+        .text-strip {
+            background-color: rgba(255, 255, 255, 0.9); /* Opaque white background */
+            box-decoration-break: clone; /* Ensures background and padding wrap correctly over multiple lines */
+            padding: 4px 8px; /* Vertical/Horizontal padding for the strip */
+            line-height: 1.7; /* Increased line-height for better spacing */
+            display: inline; /* Key to making it wrap behind each line */
+            border-radius: 4px; /* Soft rounding */
+        }
 
         /* Custom text alignment for program titles */
         .program-title {
@@ -138,21 +146,24 @@
 <main>
     <section class="hero-banner">
         <div class="container mx-auto px-4 flex items-center h-full relative z-10">
-            <!-- EDITED: Removed bg-white/90 and shadow-2xl to eliminate the visual box. -->
-            <div class="w-full md:w-1/2 p-6 sm:p-8 lg:p-10 rounded-xl"> 
+            <!-- Container padding reduced/adjusted to make room for individual text strip padding -->
+            <div class="w-full md:w-1/2 pt-10 px-4"> 
                 
-                <!-- Text colors and sizes remain unchanged, as requested. -->
+                <!-- Tagline with text-strip -->
                 <p class="text-base text-primary font-semibold mb-2">
-                    Build Your Career in Healthcare with
+                    <span class="text-strip">Build Your Career in Healthcare with</span>
                 </p>
                 
+                <!-- Main Heading with text-strip -->
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-secondary leading-tight mb-6">
-                    Jubilee Mission Group of Institutions, Bangalore
+                    <span class="text-strip">Jubilee Mission Group of Institutions, Bangalore</span>
                 </h1>
                 
+                <!-- Paragraph with text-strip -->
                 <p class="text-gray-700 mb-8 max-w-lg">
-                    Jubilee Mission Group of Institutions is a premier hub for Nursing, Physiotherapy, and Allied Health Sciences education in Bangalore. We are dedicated to nurturing skilled and compassionate healthcare professionals ready to excel in a dynamic global healthcare environment.
+                    <span class="text-strip">Jubilee Mission Group of Institutions is a premier hub for **Nursing, Physiotherapy, and Allied Health Sciences** education in Bangalore. We are dedicated to nurturing skilled and compassionate healthcare professionals ready to excel in a dynamic global healthcare environment.</span>
                 </p>
+                
                 <a href="#" class="inline-block bg-primary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
                     Explore Our Campus
                 </a>
