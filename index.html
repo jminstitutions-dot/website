@@ -30,13 +30,11 @@
             background-image: url('hero_banner.png');
             background-color: #f7f7f7; /* Background fallback color */
             background-size: cover;
-            /* EDITED: Changed background position to be 20% from the left */
-            background-position: 20% center;
+            /* Position adjusted for better mobile visibility */
+            background-position: 20% center; 
             height: 70vh; /* Responsive height */
             position: relative;
         }
-        
-        /* REMOVED: Custom CSS for .hero-text-content to simplify layout and use Tailwind classes directly */
 
         /* Custom text alignment for program titles */
         .program-title {
@@ -135,12 +133,16 @@
     </div>
 </nav>
 
-<!-- 3. Hero Section -->
+<!-- 3. Hero Section - FIX APPLIED HERE -->
 <main>
     <section class="hero-banner">
         <div class="container mx-auto px-4 flex items-center h-full relative z-10">
-            <!-- EDITED: Uses w-3/5 for mobile (aggressive wrap) and md:w-1/2 for desktop. -->
-            <div class="w-3/5 md:w-1/2 pt-10 px-4"> 
+            <!-- 
+                FIX: Replaced w-3/5 with w-full max-w-xl for better mobile width and readability.
+                Added bg-white/90, rounded-xl, shadow-lg, and padding (p-6) for mobile contrast/aesthetics.
+                Reverted those changes on medium screens (md: prefix) to maintain the original desktop design.
+            -->
+            <div class="w-full max-w-xl p-6 bg-white/90 rounded-xl shadow-lg md:bg-transparent md:shadow-none md:rounded-none md:p-0 md:w-1/2 md:max-w-none"> 
                 
                 <!-- Tagline (1 line) -->
                 <p class="text-base text-primary font-semibold mb-2">
@@ -152,7 +154,7 @@
                     Jubilee Mission Group of Institutions<br>Bangalore
                 </h1>
                 
-                <!-- Paragraph (Removed <br> tags and excessive ** to allow natural flow) -->
+                <!-- Paragraph -->
                 <p class="text-gray-700 mb-8 max-w-lg">
                     Jubilee Mission Group of Institutions is a premier hub for Nursing, Physiotherapy, and Allied Health Sciences education in Bangalore. We are dedicated to nurturing skilled and compassionate healthcare professionals ready to excel in a dynamic global healthcare environment.
                 </p>
@@ -242,7 +244,7 @@
                             Dear All,
                         </p>
                         <p>
-                            At **JMCN**, we're dedicated to excellence in nursing education. Our programs, including BSc. Nursing and potentially GNM, offer a high-quality learning experience. Affiliated with **Rajiv Gandhi University of Health Sciences, Bangalore**, our qualifications are recognized nationwide.
+                            At <strong>JMCN</strong>, we're dedicated to excellence in nursing education. Our programs, including BSc. Nursing and potentially GNM, offer a high-quality learning experience. Affiliated with <strong>Rajiv Gandhi University of Health Sciences, Bangalore</strong>, our qualifications are recognized nationwide.
                         </p>
                         <p>
                             As a leading nursing college in Bangalore, we prioritize values like compassion and competence. Approved by the **Indian Nursing Council (INC)**, our education meets national standards, preparing students for successful nursing careers. Join our transformative community at JMCN and excel in the field of nursing.
