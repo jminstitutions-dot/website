@@ -28,13 +28,13 @@
             background-image: url('hero_banner.png');
             background-color: #f7f7f7; /* Background fallback color */
             background-size: cover;
-            /* **UPDATED:** Center background position on all sizes by default for a better start */
+            /* Center background image on mobile */
             background-position: center center; 
             height: 70vh; /* Responsive height */
             position: relative;
         }
 
-        /* **NEW:** Media query to force background-position to 20% center on screens larger than mobile (md and up) */
+        /* Force background-position to 20% center on screens larger than mobile (md and up) */
         @media (min-width: 768px) {
             .hero-banner {
                 background-position: 20% center; 
@@ -131,9 +131,9 @@
 <main>
     <section class="hero-banner">
         <div class="container mx-auto px-4 flex items-center h-full relative z-10">
-            <div class="w-full max-w-xl p-6 bg-white/50 rounded-xl shadow-lg md:bg-transparent md:shadow-none md:rounded-none md:p-0 md:max-w-none text-center md:w-1/2 md:text-left mx-auto"> 
+            <div class="w-full max-w-xl p-6 bg-white/100 rounded-xl shadow-lg md:bg-transparent md:shadow-none md:rounded-none md:p-0 md:max-w-none md:w-1/2 md:text-left"> 
                 
-                <p class="text-base text-primary font-semibold mb-2 mx-auto md:mx-0">
+                <p class="text-base text-primary font-semibold mb-2">
                     Build your career in healthcare with
                 </p>
                 
@@ -141,7 +141,7 @@
                     Jubilee Mission Group of Institutions,<br>Bangalore
                 </h1>
                 
-                <p class="text-gray-700 mb-8 max-w-lg mx-auto md:mx-0">
+                <p class="text-gray-700 mb-8 max-w-lg">
                     Jubilee Mission Group of Institutions is a premier hub for Nursing, Physiotherapy, and Allied Health Sciences education in Bangalore. We are dedicated to nurturing skilled and compassionate healthcare professionals ready to excel in a dynamic global healthcare environment.
                 </p>
                 
