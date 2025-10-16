@@ -49,6 +49,25 @@
             padding: 0.75rem 0;
             font-weight: 600;
         }
+
+        /* **FIX 1: Custom class to reduce the logo size on mobile only to prevent overflow** */
+        .navbar-logo-mobile {
+            width: 60px !important; 
+            height: 60px !important;
+            /* Use a smaller size for the text element on mobile */
+            font-size: 0.85rem; 
+            line-height: 1.2;
+            margin-left: 0.25rem;
+        }
+
+        /* **FIX 2: Ensure desktop logo size is restored (original w-40 h-40)** */
+        @media (min-width: 1024px) {
+            .navbar-logo-mobile {
+                width: 160px !important; 
+                height: 160px !important;
+                font-size: 1.25rem; /* Revert text size */
+            }
+        }
     </style>
     <script>
         tailwind.config = {
@@ -92,8 +111,12 @@
                 <img 
                     src="logo.png" 
                     alt="Jubilee Mission College Logo" 
-                    class="w-40 h-40 object-contain rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
+                    class="object-contain rounded-full navbar-logo-mobile lg:w-40 lg:h-40" 
+                    onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
                 >
+                 <div class="navbar-logo-mobile lg:text-xl lg:font-bold lg:w-auto lg:h-auto">
+                    JUBILEE MISSION<br>GROUP OF INSTITUTIONS
+                </div>
             </a>
 
             <div class="hidden lg:flex items-center space-x-8 text-white">
