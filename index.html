@@ -36,7 +36,19 @@
             position: relative;
         }
         
-        /* REMOVED: .text-strip class */
+        /* NEW: Styles for the text container to offset it 20% from the left on small screens */
+        .hero-text-content {
+            width: 80%; /* Default to 80% width on mobile */
+            margin-left: 20%; /* Shift 20% from the left on mobile */
+        }
+        
+        /* Override offset and width for medium/large screens (md: and up) */
+        @media (min-width: 768px) {
+            .hero-text-content {
+                width: 50%; /* Revert to the intended md:w-1/2 layout */
+                margin-left: 0; /* Align back to the left */
+            }
+        }
 
         /* Custom text alignment for program titles */
         .program-title {
@@ -139,22 +151,22 @@
 <main>
     <section class="hero-banner">
         <div class="container mx-auto px-4 flex items-center h-full relative z-10">
-            <!-- EDIT: Removed the inline <span> tags and the text-strip class, reverting to original text blocks -->
-            <div class="w-full md:w-1/2 pt-10 px-4"> 
+            <!-- EDITED: Added hero-text-content class and simplified width classes (now managed by CSS) -->
+            <div class="hero-text-content pt-10 px-4"> 
                 
-                <!-- Tagline reverted -->
+                <!-- Tagline -->
                 <p class="text-base text-primary font-semibold mb-2">
                     Build Your Career in Healthcare with
                 </p>
                 
-                <!-- Main Heading reverted -->
+                <!-- Main Heading -->
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-secondary leading-tight mb-6">
                     Jubilee Mission Group of Institutions, Bangalore
                 </h1>
                 
-                <!-- Paragraph reverted -->
+                <!-- Paragraph -->
                 <p class="text-gray-700 mb-8 max-w-lg">
-                    Jubilee Mission Group of Institutions is a premier hub for Nursing, Physiotherapy, and Allied Health Sciences education in Bangalore. We are dedicated to nurturing skilled and compassionate healthcare professionals ready to excel in a dynamic global healthcare environment.
+                    Jubilee Mission Group of Institutions is a premier hub for **Nursing, Physiotherapy, and Allied Health Sciences** education in Bangalore. We are dedicated to nurturing skilled and compassionate healthcare professionals ready to excel in a dynamic global healthcare environment.
                 </p>
                 
                 <a href="#" class="inline-block bg-primary hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
