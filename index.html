@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jubilee Mission Group of Institutions</title>
+    <title>Jubilee Mission Group of Institutions - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -21,7 +21,8 @@
         .bg-footer { background-color: var(--color-footer); }
 
         .hero-banner {
-            background-image: url('hero_banner.png');
+            /* Placeholder: Use a generic image path or a color fallback */
+            background-image: url('https://placehold.co/1920x800/f7f7f7/330033?text=Jubilee+Mission+Campus');
             background-color: #f7f7f7;
             background-size: cover;
             background-position: center center;
@@ -64,6 +65,7 @@
 </head>
 <body>
 
+<!-- Reusable Header/Navigation Start -->
 <header class="bg-primary text-white text-sm hidden lg:block">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
         <div class="flex space-x-6">
@@ -74,7 +76,8 @@
         <div class="flex space-x-4">
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
+            <!-- UPDATED: Instagram URL -->
+            <a href="https://www.instagram.com/jubilee_mission_group/" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
@@ -83,7 +86,7 @@
 <nav class="bg-secondary shadow-lg">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center h-24">
-            <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
+            <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
                 <img 
                     src="logo.png" 
                     alt="Jubilee Mission College Logo" 
@@ -93,14 +96,15 @@
             </a>
 
             <div class="hidden lg:flex items-center space-x-6 text-white">
-                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
+                <a href="index.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
                 <a href="about_institution.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">About Institution</a>
                 <a href="courses.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Courses</a>
                 <a href="campus.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Campus</a>
-                <a href="contact.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Contact Us</a>
+                <a href="gallery.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Gallery</a>
+                <a href="contact_us.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Contact Us</a>
             </div>
 
-            <a href="#" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
+            <a href="contact_us.html" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
                 ADMISSION OPEN
             </a>
 
@@ -111,14 +115,16 @@
     </div>
 
     <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
-        <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
+        <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
         <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">About Institution</a>
         <a href="courses.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Courses</a>
         <a href="campus.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Campus</a>
-        <a href="contact.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Contact Us</a>
-        <a href="#" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
+        <a href="gallery.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Gallery</a>
+        <a href="contact_us.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Contact Us</a>
+        <a href="contact_us.html" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
     </div>
 </nav>
+<!-- Reusable Header/Navigation End -->
 
 <main>
     <section class="hero-banner">
@@ -249,11 +255,12 @@
     </section>
 </main>
 
+<!-- Reusable Footer Start -->
 <footer class="bg-footer text-white py-10">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
             <div class="space-y-4">
-                <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
+                <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
                     <img src="logo.png" alt="Jubilee Mission College Logo" class="w-40 h-18 object-contain rounded-full"
                         onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';">
                 </a>
@@ -267,7 +274,8 @@
                     <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300">
                         <i class="fab fa-twitter text-white"></i>
                     </a>
-                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300">
+                    <!-- UPDATED: Instagram URL -->
+                    <a href="https://www.instagram.com/jubilee_mission_group/" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300">
                         <i class="fab fa-instagram text-white"></i>
                     </a>
                     <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300">
@@ -280,7 +288,7 @@
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
                 <ul class="space-y-2 text-sm">
                     <li><a href="courses.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
-                    <li><a href="contact.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
+                    <li><a href="contact_us.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
                     <li><a href="about_institution.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
                 </ul>
@@ -291,7 +299,7 @@
                 <ul class="space-y-2 text-sm">
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITAL</a></li>
+                    <li><a href="hospitals.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITAL</a></li>
                 </ul>
             </div>
 
@@ -317,13 +325,13 @@
         <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
             <p>&copy; Copyright Jubilee 2025. All rights reserved.
                 <span class="ml-4 pl-4 border-l border-gray-700">Developed by Neocx Innovative Educations Private Limited</span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Terms Of Service</a></span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Legal</a></span>
+                <!-- UPDATED: Privacy Policy link updated to privacy.html; Terms of Service and Legal links removed -->
+                <span class="ml-4 pl-4 border-l border-gray-700"><a href="privacy.html" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
             </p>
         </div>
     </div>
 </footer>
+<!-- Reusable Footer End -->
 
 <script>
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
