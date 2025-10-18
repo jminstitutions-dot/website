@@ -21,8 +21,8 @@
         .bg-footer { background-color: var(--color-footer); }
 
         .hero-banner {
-            /* Placeholder: Use a generic image path or a color fallback */
-            background-image: url('https://placehold.co/1920x800/f7f7f7/330033?text=Jubilee+Mission+Campus');
+            /* FIXED: Reverting to the local file path. Ensure 'hero_banner.png' is in the root directory. */
+            background-image: url('hero_banner.png');
             background-color: #f7f7f7;
             background-size: cover;
             background-position: center center;
@@ -76,7 +76,6 @@
         <div class="flex space-x-4">
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-twitter"></i></a>
-            <!-- UPDATED: Instagram URL -->
             <a href="https://www.instagram.com/jubilee_mission_group/" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-youtube"></i></a>
         </div>
@@ -96,7 +95,7 @@
             </a>
 
             <div class="hidden lg:flex items-center space-x-6 text-white">
-                <a href="index.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
+                <a href="index.html" class="py-5 px-3 text-primary bg-white/10 transition duration-300 font-bold rounded-md">Home</a>
                 <a href="about_institution.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">About Institution</a>
                 <a href="courses.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Courses</a>
                 <a href="campus.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Campus</a>
@@ -115,7 +114,7 @@
     </div>
 
     <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
-        <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
+        <a href="index.html" class="block py-3 px-4 text-sm text-primary bg-white/10 transition duration-200 font-bold">Home</a>
         <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">About Institution</a>
         <a href="courses.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Courses</a>
         <a href="campus.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Campus</a>
@@ -274,7 +273,6 @@
                     <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300">
                         <i class="fab fa-twitter text-white"></i>
                     </a>
-                    <!-- UPDATED: Instagram URL -->
                     <a href="https://www.instagram.com/jubilee_mission_group/" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300">
                         <i class="fab fa-instagram text-white"></i>
                     </a>
@@ -287,19 +285,25 @@
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
                 <ul class="space-y-2 text-sm">
+                    <li><a href="contact_us.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ADMISSION</a></li>
                     <li><a href="courses.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
                     <li><a href="contact_us.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
                     <li><a href="about_institution.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
+                    <li><a href="gallery.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> GALLERY</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">QUICK LINKS</h3>
                 <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> PLACEMENTS</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
                     <li><a href="hospitals.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITAL</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> INTERNSHIP</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> SOFT SKILLS LAB</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> TEACHING FACULTY</a></li>
                 </ul>
             </div>
 
@@ -325,7 +329,6 @@
         <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
             <p>&copy; Copyright Jubilee 2025. All rights reserved.
                 <span class="ml-4 pl-4 border-l border-gray-700">Developed by Neocx Innovative Educations Private Limited</span>
-                <!-- UPDATED: Privacy Policy link updated to privacy.html; Terms of Service and Legal links removed -->
                 <span class="ml-4 pl-4 border-l border-gray-700"><a href="privacy.html" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
             </p>
         </div>
