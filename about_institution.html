@@ -29,10 +29,10 @@
             padding-bottom: 0.25rem;
         }
 
-        /* Hero banner for the sub-page */
+        /* Hero banner for the sub-page - UPDATED TO .JPG FILE EXTENSION */
         .page-hero {
             background-color: var(--color-secondary);
-            background-image: linear-gradient(rgba(51, 0, 51, 0.8), rgba(51, 0, 51, 0.8)), url('https://placehold.co/1200x400/330033/ffffff?text=Jubilee+Mission+Campus');
+            background-image: linear-gradient(rgba(51, 0, 51, 0.8), rgba(51, 0, 51, 0.8)), url('about_hero.jpg');
             background-size: cover;
             background-position: center;
             height: 30vh;
@@ -57,6 +57,7 @@
 </head>
 <body>
 
+<!-- Reusable Header/Navigation Start - SYNCHRONIZED -->
 <header class="bg-primary text-white text-sm hidden lg:block">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
         <div class="flex space-x-6">
@@ -67,7 +68,7 @@
         <div class="flex space-x-4">
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/jubilee_mission_group/" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
             <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
@@ -76,7 +77,7 @@
 <nav class="bg-secondary shadow-lg">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center h-24"> 
-            <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
+            <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
                 <img 
                     src="logo.png" 
                     alt="Jubilee Mission College Logo" 
@@ -86,14 +87,16 @@
             </a>
 
             <div class="hidden lg:flex items-center space-x-6 text-white">
-                <a href="#" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
+                <a href="index.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
+                <!-- HIGHLIGHTED: Active Page -->
                 <a href="about_institution.html" class="py-5 px-3 text-primary transition duration-300 font-bold bg-white/10 rounded-md">About Institution</a>
                 <a href="courses.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Courses</a>
                 <a href="campus.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Campus</a>
-                <a href="contact.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Contact Us</a>
+                <a href="gallery.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Gallery</a>
+                <a href="contact_us.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Contact Us</a>
             </div>
 
-            <a href="#" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
+            <a href="contact_us.html" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
                 ADMISSION OPEN
             </a>
             
@@ -104,14 +107,17 @@
     </div>
 
     <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
-        <a href="#" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
+        <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
+        <!-- HIGHLIGHTED: Active Page -->
         <a href="about_institution.html" class="block py-3 px-4 text-sm text-primary bg-white/10 transition duration-200 font-bold">About Institution</a>
         <a href="courses.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Courses</a>
         <a href="campus.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Campus</a>
-        <a href="contact.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Contact Us</a>
-        <a href="#" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
+        <a href="gallery.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Gallery</a>
+        <a href="contact_us.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Contact Us</a>
+        <a href="contact_us.html" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
     </div>
 </nav>
+<!-- Reusable Header/Navigation End -->
 
 <main>
     <section class="page-hero flex items-center justify-center">
@@ -128,13 +134,13 @@
             
             <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
                 <p>
-                    The **Jubilee Mission Group of Institutions** stands as a beacon of excellence in healthcare education, dedicated to cultivating the next generation of compassionate and skilled professionals in **Nursing, Physiotherapy (BPT), and Allied Health Sciences (B.Sc.)**. Established with a commitment to holistic development, we pride ourselves on blending rigorous academic standards with extensive practical experience, ensuring our graduates are job-ready and ethically grounded. Our campus, located in the vibrant city of Bangalore, provides a stimulating and supportive environment conducive to both intellectual and personal growth.
+                    The <b>Jubilee Mission Group of Institutions</b> stands as a beacon of excellence in healthcare education, dedicated to cultivating the next generation of compassionate and skilled professionals in <b>Nursing, Physiotherapy (BPT), and Allied Health Sciences (B.Sc.)</b>. Established with a commitment to holistic development, we pride ourselves on blending rigorous academic standards with extensive practical experience, ensuring our graduates are job-ready and ethically grounded. Our campus, located in the vibrant city of Bangalore, provides a stimulating and supportive environment conducive to both intellectual and personal growth.
                 </p>
                 <p>
                     From our modern, well-equipped classrooms and advanced simulation labs to our dedicated clinical tie-ups with leading hospitals, every aspect of the institution is designed to provide a world-class learning experience. Our curriculum is constantly updated to align with global healthcare trends, ensuring students master the latest techniques and knowledge required in a dynamic medical field. We understand that healthcare is a service-oriented profession, and thus, our faculty—comprising experienced academics and practicing clinicians—are committed to instilling the core values of integrity, empathy, and professional responsibility.
                 </p>
                 <p>
-                    Our approach goes beyond textbooks. We emphasize hands-on training, critical thinking, and communication skills, preparing students for diverse roles, from direct patient care to research and management. Whether rehabilitating patients through physiotherapy, providing compassionate care as a nurse, or managing complex diagnostic procedures in allied health, a Jubilee Mission graduate is recognized for their competence and commitment. We are not just educating students; we are shaping **healthcare leaders** capable of making a tangible, positive impact on community health and well-being, reflecting our motto: "World-changing Ideas. Life-changing Impact." We welcome aspirants who share our dedication to service and excellence to join our mission.
+                    Our approach goes beyond textbooks. We emphasize hands-on training, critical thinking, and communication skills, preparing students for diverse roles, from direct patient care to research and management. Whether rehabilitating patients through physiotherapy, providing compassionate care as a nurse, or managing complex diagnostic procedures in allied health, a Jubilee Mission graduate is recognized for their competence and commitment. We are not just educating students; we are shaping <b>healthcare leaders</b> capable of making a tangible, positive impact on community health and well-being, reflecting our motto: "World-changing Ideas. Life-changing Impact." We welcome aspirants who share our dedication to service and excellence to join our mission.
                 </p>
             </div>
         </div>
@@ -149,14 +155,14 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                 
+                <!-- CARD 1: CEO (VASUDEVA - PNG) -->
                 <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-primary flex flex-col items-center lg:flex-row">
                     <div class="w-48 h-48 lg:w-40 lg:h-40 flex-shrink-0 mb-6 lg:mb-0 lg:mr-8">
                         <img 
                             src="ceo_vasudeva.png" 
                             alt="Dr. Vasudeva R, CEO" 
                             class="w-full h-full object-cover rounded-full border-4 border-primary shadow-lg"
-                            onerror="this.onerror=null; this.src='https://placehold.co/160x160/330033/ffffff?text=Dr.+Vasudeva+R';"
-                        >
+                            onerror="this.onerror=null; this.src='https://placehold.co/160x160/330033/ffffff?text=CEO+Image';">
                     </div>
                     <div class="lg:flex-grow text-center lg:text-left">
                         <h3 class="text-2xl font-bold text-secondary mb-2">Message from the CEO</h3>
@@ -167,17 +173,35 @@
                     </div>
                 </div>
 
+                <!-- CARD 2: PHYSIOTHERAPY PRINCIPAL (NEW - JPG) -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-primary flex flex-col items-center lg:flex-row">
+                    <div class="w-48 h-48 lg:w-40 lg:h-40 flex-shrink-0 mb-6 lg:mb-0 lg:mr-8">
+                        <img 
+                            src="principal_physio.jpg" 
+                            alt="Physiotherapy Principal" 
+                            class="w-full h-full object-cover rounded-full border-4 border-primary shadow-lg"
+                            onerror="this.onerror=null; this.src='https://placehold.co/160x160/990000/ffffff?text=Physio+Principal+Image';">
+                    </div>
+                    <div class="lg:flex-grow text-center lg:text-left">
+                        <h3 class="text-2xl font-bold text-secondary mb-2">Message from the Principal (Physiotherapy)</h3>
+                        <p class="text-primary font-semibold mb-4">[Placeholder Name]</p>
+                        <p class="text-gray-700 text-base italic">
+                            "Physiotherapy is the science of movement, essential for restoring health and independence. We are committed to teaching clinical excellence, combining rigorous academic theory with intensive hands-on practice. Our faculty mentors students in a dynamic environment, ensuring they master patient assessment, evidence-based rehabilitation techniques, and therapeutic communication. Graduates leave here prepared to lead in orthopedics, neurology, sports medicine, and critical care, truly changing lives one movement at a time."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 3: NURSING PRINCIPAL (MANIMEGALAI - PNG) -->
                 <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-primary flex flex-col items-center lg:flex-row">
                     <div class="w-48 h-48 lg:w-40 lg:h-40 flex-shrink-0 mb-6 lg:mb-0 lg:mr-8">
                         <img 
                             src="principal_manimegalai.png" 
                             alt="Manimegalai S, Principal" 
                             class="w-full h-full object-cover rounded-full border-4 border-primary shadow-lg"
-                            onerror="this.onerror=null; this.src='https://placehold.co/160x160/990000/ffffff?text=Manimegalai+S';"
-                        >
+                            onerror="this.onerror=null; this.src='https://placehold.co/160x160/990000/ffffff?text=Principal+Image';">
                     </div>
                     <div class="lg:flex-grow text-center lg:text-left">
-                        <h3 class="text-2xl font-bold text-secondary mb-2">Message from the Principal</h3>
+                        <h3 class="text-2xl font-bold text-secondary mb-2">Message from the Principal (Nursing)</h3>
                         <p class="text-primary font-semibold mb-4">Manimegalai S</p>
                         <p class="text-gray-700 text-base italic">
                             "It is my honor to lead an institution dedicated to imparting knowledge with a heart. Education here is a partnership; we work closely with our students to develop their clinical skills alongside their interpersonal and ethical capabilities. Our priority is creating a nurturing atmosphere where every student feels supported to reach their full potential. The success of our students in diverse clinical settings globally is a testament to the quality of training we provide in Nursing and Allied Health. Join us and experience a rewarding educational journey that truly prepares you for life's challenges."
@@ -185,17 +209,36 @@
                     </div>
                 </div>
 
+                <!-- CARD 4: ALLIED HEALTH PRINCIPAL (NEW - JPG) -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-primary flex flex-col items-center lg:flex-row">
+                    <div class="w-48 h-48 lg:w-40 lg:h-40 flex-shrink-0 mb-6 lg:mb-0 lg:mr-8">
+                        <img 
+                            src="principal_allied.jpg" 
+                            alt="Allied Health Principal" 
+                            class="w-full h-full object-cover rounded-full border-4 border-primary shadow-lg"
+                            onerror="this.onerror=null; this.src='https://placehold.co/160x160/330033/ffffff?text=Allied+Principal+Image';">
+                    </div>
+                    <div class="lg:flex-grow text-center lg:text-left">
+                        <h3 class="text-2xl font-bold text-secondary mb-2">Message from the Principal (Allied Health Sciences)</h3>
+                        <p class="text-primary font-semibold mb-4">[Placeholder Name]</p>
+                        <p class="text-gray-700 text-base italic">
+                            "Allied Health professionals are the backbone of modern diagnostics and patient care infrastructure. Our programs focus heavily on technical precision, advanced laboratory skills, and specialized equipment management, from medical imaging to operation theatre technology. We foster a commitment to accuracy and professionalism, preparing our students for essential technical roles where attention to detail directly impacts patient outcomes and clinical decisions globally."
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </main>
 
+<!-- Reusable Footer Start - SYNCHRONIZED -->
 <footer class="bg-footer text-white py-10">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
             
             <div class="space-y-4">
-                 <a href="#" class="flex items-center space-x-2 text-white text-xl font-bold">
+                <!-- Logo link points to index.html -->
+                <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
                     <img 
                         src="logo.png" 
                         alt="Jubilee Mission College Logo" 
@@ -204,12 +247,13 @@
                     >
                 </a>
                 <p class="text-sm text-gray-400">
-                    Join Jubilee Mission Group of Institutions in Bangalore for quality healthcare education...
+                    Join Jubilee Mission Group of Institutions in Bangalore for quality healthcare education in BPT, Nursing, and Allied Health Sciences. Our programs combine hands-on training with a strong foundation in compassion, competence, and ethics—preparing you for a meaningful career across diverse healthcare fields. Discover your future with us.
                 </p>
                 <div class="flex space-x-4 pt-2">
                     <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-facebook-f text-white"></i></a>
                     <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-twitter text-white"></i></a>
-                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-instagram text-white"></i></a>
+                    <!-- UPDATED: Instagram URL -->
+                    <a href="https://www.instagram.com/jubilee_mission_group/" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-instagram text-white"></i></a>
                     <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-youtube text-white"></i></a>
                 </div>
             </div>
@@ -218,7 +262,8 @@
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
                 <ul class="space-y-2 text-sm">
                     <li><a href="courses.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
-                    <li><a href="contact.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
+                    <!-- CORRECTED: contact.html changed to contact_us.html -->
+                    <li><a href="contact_us.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
                     <li><a href="about_institution.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
                 </ul>
@@ -229,7 +274,8 @@
                 <ul class="space-y-2 text-sm">
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITAL</a></li>
+                    <!-- CORRECTED: Link changed to hospitals.html and text to HOSPITALS -->
+                    <li><a href="hospitals.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITALS</a></li>
                 </ul>
             </div>
 
@@ -242,7 +288,7 @@
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-phone text-primary mr-3"></i>
-                        <p>+91 9986433333</p>
+                        <p>+91 9998643333</p>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-envelope text-primary mr-3"></i>
@@ -250,15 +296,13 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
             <p>&copy; Copyright Jubilee 2025. All rights reserved.
                 <span class="ml-4 pl-4 border-l border-gray-700">Developed by Neocx Innovative Educations Private Limited</span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Terms Of Service</a></span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="#" class="hover:text-primary transition duration-200">Legal</a></span>
+                <!-- SYNCHRONIZED: Privacy Policy link -->
+                <span class="ml-4 pl-4 border-l border-gray-700"><a href="privacy.html" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
             </p>
         </div>
     </div>
