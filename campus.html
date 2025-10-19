@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus | Jubilee Mission Group of Institutions</title>
+    <title>Jubilee Mission Group of Institutions - Campus Life & Facilities</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Custom Tailwind Configuration for Colors and Font */
         :root {
-            --color-primary: #990000; /* Dark Red/Maroon for accents */
-            --color-secondary: #330033; /* Dark Purple for Navbar */
-            --color-footer: #2b2b2b; /* Dark background for footer */
+            --color-primary: #990000;
+            --color-secondary: #330033;
+            --color-footer: #2b2b2b;
         }
-        
-        /* Customizing Tailwind with Inter font */
+
         html { font-family: 'Inter', sans-serif; }
         .bg-primary { background-color: var(--color-primary); }
         .text-primary { color: var(--color-primary); }
         .bg-secondary { background-color: var(--color-secondary); }
-        .text-secondary { color: var(--color-secondary); } 
+        .text-secondary { color: var(--color-secondary); }
         .bg-footer { background-color: var(--color-footer); }
-        
-        /* Utility for Section Headers - Centered for Campus Page */
-        .section-header {
-            border-bottom: 4px solid var(--color-primary);
-            display: inline-block;
-            padding-bottom: 0.25rem;
+
+        /* Custom style for active link in campus page */
+        .nav-active {
+            color: var(--color-primary);
+            background-color: white;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
         }
 
-        /* Hero banner for the sub-page */
-        .page-hero {
-            background-color: var(--color-secondary);
-            background-image: linear-gradient(rgba(51, 0, 51, 0.8), rgba(51, 0, 51, 0.8)), url('https://placehold.co/1200x400/330033/ffffff?text=Jubilee+Mission+Campus+Entrance');
-            background-size: cover;
-            background-position: center;
-            height: 30vh;
+        /* Lightbox effect for smoother transitions */
+        #lightbox-modal {
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 50;
+        }
+        #lightbox-modal.show {
+            opacity: 1;
+            pointer-events: auto;
+            display: flex; /* Override hidden */
         }
     </style>
     <script>
@@ -57,7 +61,7 @@
 </head>
 <body>
 
-<!-- Header (Top Bar) -->
+<!-- Reusable Header/Navigation Start -->
 <header class="bg-primary text-white text-sm hidden lg:block">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
         <div class="flex space-x-6">
@@ -74,24 +78,24 @@
     </div>
 </header>
 
-<!-- Navigation Bar -->
 <nav class="bg-secondary shadow-lg">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center h-24"> 
+        <div class="flex justify-between items-center h-24">
             <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
                 <img 
                     src="logo.png" 
                     alt="Jubilee Mission College Logo" 
-                    class="w-40 h-18 object-contain rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
+                    class="w-40 h-18 object-contain rounded-full" 
+                    onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
                 >
             </a>
 
+            <!-- Main navigation links: Campus is active -->
             <div class="hidden lg:flex items-center space-x-6 text-white">
                 <a href="index.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
                 <a href="about_institution.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">About Institution</a>
                 <a href="courses.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Courses</a>
-                <!-- Current Page Highlight and correct name -->
-                <a href="campus.html" class="py-5 px-3 text-primary bg-white/10 transition duration-300 font-bold rounded-md">Campus</a>
+                <a href="campus.html" class="py-5 px-3 nav-active transition duration-300 font-bold">Campus</a>
                 <a href="gallery.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Gallery</a>
                 <a href="contact_us.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Contact Us</a>
             </div>
@@ -99,155 +103,408 @@
             <a href="contact_us.html" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
                 ADMISSION OPEN
             </a>
-            
+
             <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile menu links: Campus is active -->
     <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
         <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
         <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">About Institution</a>
         <a href="courses.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Courses</a>
-        <!-- Current Page Highlight and correct name -->
         <a href="campus.html" class="block py-3 px-4 text-sm text-primary bg-white/10 transition duration-200 font-bold">Campus</a>
         <a href="gallery.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Gallery</a>
         <a href="contact_us.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Contact Us</a>
         <a href="contact_us.html" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
     </div>
 </nav>
+<!-- Reusable Header/Navigation End -->
 
 <main>
-    <!-- Page Hero Banner -->
-    <section class="page-hero flex items-center justify-center">
-        <h1 class="text-5xl font-extrabold text-white text-center tracking-wider">
-            Our World-Class Campus
-        </h1>
-    </section>
-
-    <!-- Campus Overview Section -->
-    <section class="py-16 md:py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-secondary text-center mb-10 section-header mx-auto">
-                A Hub of Learning and Innovation
-            </h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-12">
-                <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
-                    <p>
-                        The Jubilee Mission Group of Institutions is strategically **located in the heart of the city**, ensuring unparalleled accessibility and connectivity for our students. This prime location offers the dual advantage of a serene academic environment combined with the cultural and professional opportunities of a major metropolitan hub.
-                    </p>
-                    <p>
-                        We boast **modern infrastructure** designed to facilitate advanced healthcare education. This includes spacious, technology-enabled lecture halls, dedicated simulation rooms, and high-speed campus-wide Wi-Fi. Our commitment to student convenience is reflected in the **excellent transport** links surrounding the campus, making daily commuting simple for both local and commuting students.
-                    </p>
-                    <p>
-                        The campus environment is deliberately holistic, offering comfortable residential facilities, recreational areas, and secure spaces, all contributing to a balanced and enriching student life.
-                    </p>
-                </div>
-                <div class="order-first lg:order-last">
-                    <img 
-                        src="campus_main.jpg" 
-                        alt="Modern Jubilee Mission Campus Building" 
-                        class="w-full h-80 md:h-96 object-cover rounded-xl shadow-2xl border-b-8 border-primary transition duration-300 hover:shadow-primary"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x450/990000/ffffff?text=Modern+Campus+Building';"
-                    >
-                </div>
-            </div>
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-extrabold text-secondary mb-3">Our Vibrant Campus Life</h1>
+            <p class="text-xl text-gray-600">Explore the state-of-the-art facilities and enriching environment that supports academic and personal growth.</p>
         </div>
     </section>
 
-    <!-- Library Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-secondary text-center mb-12 section-header mx-auto">
-                The Knowledge Hub: Central Library
-            </h2>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mt-12">
-                <div class="lg:col-span-2 space-y-6 text-gray-700 text-lg leading-relaxed bg-white p-8 rounded-xl shadow-2xl border-l-8 border-secondary">
-                    <p>
-                        Our central **Library** is the nerve center of academic activity, offering students and faculty access to a vast collection of resources crucial for **Nursing, Physiotherapy, and Allied Health Sciences**. We house an extensive range of textbooks, national and international journals, reference materials, and a rapidly expanding collection of **e-resources**.
-                    </p>
-                    <p>
-                        The library features tranquil, air-conditioned reading rooms, dedicated study carrels, and a digital section equipped with high-speed internet and access to online databases. We believe in fostering a culture of lifelong learning and research, making the library an indispensable resource for every student's academic journey.
-                    </p>
-                    <a href="campus.html#library" class="text-primary font-bold hover:underline flex items-center pt-2">
-                        View Library Collection Details 
-                        <i class="fas fa-chevron-right text-xs ml-2"></i>
-                    </a>
-                </div>
-                <div class="lg:col-span-1">
-                    <img 
-                        src="library.jpg" 
-                        alt="Library interior showing books" 
-                        class="w-full h-80 object-cover rounded-xl shadow-xl border-t-4 border-primary"
-                        onerror="this.onerror=null; this.src='https://placehold.co/400x320/330033/ffffff?text=Central+Library';"
-                    >
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sports and Recreation Section -->
+    <!-- Facilities Overview Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-secondary text-center mb-12 section-header mx-auto">
-                Sports & Wellness Facilities
+            <h2 class="text-4xl md:text-5xl font-extrabold text-primary text-center mb-12">
+                ACADEMIC & LIVING INFRASTRUCTURE
             </h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mt-12">
-                <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
-                    <p>
-                        We recognize that physical wellness is paramount, especially for future healthcare professionals. Our **Sports** facilities are designed to encourage active student participation in various indoor and outdoor games.
-                    </p>
-                    <p>
-                        We provide dedicated spaces for **badminton, basketball, indoor games** like chess and carrom, and a well-equipped **gymnasium**. These activities promote teamwork, discipline, and stress reduction, contributing significantly to the overall well-being and holistic development of our student body. Regular inter-college events and fitness programs are organized throughout the year.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                
+                <div class="p-6 rounded-xl shadow-2xl border-t-4 border-secondary hover:shadow-secondary transition duration-300">
+                    <i class="fas fa-flask text-5xl text-secondary mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Modern Laboratories</h3>
+                    <p class="text-gray-700 text-sm">
+                        Our specialized labs for Anatomy, Physiology, Pathology, and Nursing skills are equipped with the latest technology and simulation tools for hands-on, real-world training.
                     </p>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <img src="https://placehold.co/300x200/990000/ffffff?text=Basketball" alt="Sports placeholder 1" class="w-full h-40 object-cover rounded-lg shadow-md transition duration-300 hover:scale-105">
-                    <img src="https://placehold.co/300x200/330033/ffffff?text=Gymnasium" alt="Sports placeholder 2" class="w-full h-40 object-cover rounded-lg shadow-md transition duration-300 hover:scale-105">
-                    <img src="https://placehold.co/300x200/330033/ffffff?text=Indoor+Games" alt="Sports placeholder 3" class="w-full h-40 object-cover rounded-lg shadow-md transition duration-300 hover:scale-105">
-                    <img src="https://placehold.co/300x200/990000/ffffff?text=Yoga+Area" alt="Sports placeholder 4" class="w-full h-40 object-cover rounded-lg shadow-md transition duration-300 hover:scale-105">
+
+                <div class="p-6 rounded-xl shadow-2xl border-t-4 border-secondary hover:shadow-secondary transition duration-300">
+                    <i class="fas fa-book-open text-5xl text-secondary mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Resourceful Library</h3>
+                    <p class="text-gray-700 text-sm">
+                        A vast collection of over 5,000 medical books, journals, e-resources, and quiet reading spaces to foster focused research and in-depth study for all students.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl shadow-2xl border-t-4 border-secondary hover:shadow-secondary transition duration-300">
+                    <i class="fas fa-home text-5xl text-secondary mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Safe Hostel Accommodation</h3>
+                    <p class="text-gray-700 text-sm">
+                        Separate, secure, and well-maintained hostel facilities for male and female students, providing a comfortable and conducive living environment with nutritious meals.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Laboratories Section -->
-    <section class="py-16 md:py-20 bg-gray-50">
+    <!-- Sports Gallery Section (42 Images) -->
+    <section class="py-16 md:py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-secondary text-center mb-12 section-header mx-auto">
-                Advanced Clinical & Anatomy Laboratories
+            <h2 class="text-4xl md:text-5xl font-extrabold text-secondary text-center mb-12">
+                SPORTS & EXTRA-CURRICULAR ACTIVITIES
             </h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mt-12">
-                <div class="grid grid-cols-2 gap-4 order-2 lg:order-1">
-                    <img src="https://placehold.co/300x200/330033/ffffff?text=Nursing+Lab" alt="Lab placeholder 1" class="w-full h-40 object-cover rounded-lg shadow-md transition duration-300 hover:scale-105">
-                    <img src="https://placehold.co/300x200/990000/ffffff?text=Anatomy+Lab" alt="Lab placeholder 2" class="w-full h-40 object-cover rounded-lg shadow-md transition duration-300 hover:scale-105">
-                    <img src="https://placehold.co/300x200/990000/ffffff?text=Physio+Lab" alt="Lab placeholder 3" class="w-full h-40 object-cover rounded-lg shadow-md transition duration-300 hover:scale-105">
-                    <img src="https://placehold.co/300x200/330033/ffffff?text=Biochem+Lab" alt="Lab placeholder 4" class="w-full h-40 object-cover rounded-lg shadow-md transition duration-300 hover:scale-105">
+            <p class="text-lg text-gray-700 text-center mb-10 max-w-3xl mx-auto">
+                We strongly encourage a balance between academics and physical fitness. Our extensive sports program includes facilities for volleyball, basketball, cricket, and indoor games.
+            </p>
+
+            <div id="sports-gallery" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+                
+                <!-- 42 Sports Images (sports_1.jpg to sports_42.jpg) -->
+                
+                <!-- Group 1: sports_1.jpg to sports_6.jpg -->
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_1.jpg', 'Annual Sports Meet Opening Ceremony')">
+                    <img src="sports_1.jpg" alt="Sports Image 1" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+1';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
                 </div>
-                <div class="space-y-6 text-gray-700 text-lg leading-relaxed order-1 lg:order-2">
-                    <p>
-                        Practical expertise is non-negotiable in healthcare. Our **Laboratories** are equipped with cutting-edge technology and simulation models to provide realistic, hands-on training.
-                    </p>
-                    <p>
-                        Key facilities include the dedicated **Anatomy and Physiology Labs**, a fully functional **Nursing Foundation Lab** with sophisticated manikins, and specialized **Physiotherapy Labs** for electrotherapy and exercise therapy. These labs ensure students can bridge the gap between theoretical knowledge and clinical application in a controlled, supervised environment.
-                    </p>
-                    <p>
-                        All equipment is maintained to the highest standards, mirroring the setups found in modern hospital environments, preparing students for real patient care right from day one.
-                    </p>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_2.jpg', 'Basketball Team in Action')">
+                    <img src="sports_2.jpg" alt="Sports Image 2" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+2';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_3.jpg', 'Volleyball Match')">
+                    <img src="sports_3.jpg" alt="Sports Image 3" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+3';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_4.jpg', 'Cricket Practice Session')">
+                    <img src="sports_4.jpg" alt="Sports Image 4" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+4';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_5.jpg', 'Track and Field Sprint')">
+                    <img src="sports_5.jpg" alt="Sports Image 5" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+5';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_6.jpg', 'Badminton Court Interior')">
+                    <img src="sports_6.jpg" alt="Sports Image 6" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+6';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <!-- Group 2: sports_7.jpg to sports_12.jpg -->
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_7.jpg', 'Winners Podium Photo')">
+                    <img src="sports_7.jpg" alt="Sports Image 7" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+7';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_8.jpg', 'Chess Tournament in Library')">
+                    <img src="sports_8.jpg" alt="Sports Image 8" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+8';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_9.jpg', 'Faculty vs Student Match')">
+                    <img src="sports_9.jpg" alt="Sports Image 9" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+9';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_10.jpg', 'Tug-of-War Competition')">
+                    <img src="sports_10.jpg" alt="Sports Image 10" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+10';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_11.jpg', 'Kabaddi Match')">
+                    <img src="sports_11.jpg" alt="Sports Image 11" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+11';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_12.jpg', 'Sports Ground View')">
+                    <img src="sports_12.jpg" alt="Sports Image 12" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+12';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Group 3: sports_13.jpg to sports_18.jpg -->
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_13.jpg', 'Long Jump Event')">
+                    <img src="sports_13.jpg" alt="Sports Image 13" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+13';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_14.jpg', 'Javelin Throw')">
+                    <img src="sports_14.jpg" alt="Sports Image 14" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+14';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_15.jpg', 'Indoor Table Tennis')">
+                    <img src="sports_15.jpg" alt="Sports Image 15" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+15';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_16.jpg', 'Girls Hockey Team')">
+                    <img src="sports_16.jpg" alt="Sports Image 16" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+16';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_17.jpg', 'Yoga and Meditation Session')">
+                    <img src="sports_17.jpg" alt="Sports Image 17" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+17';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_18.jpg', 'Cross Country Run')">
+                    <img src="sports_18.jpg" alt="Sports Image 18" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+18';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Group 4: sports_19.jpg to sports_24.jpg -->
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_19.jpg', 'Badminton Doubles Match')">
+                    <img src="sports_19.jpg" alt="Sports Image 19" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+19';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_20.jpg', 'Students Cheering')">
+                    <img src="sports_20.jpg" alt="Sports Image 20" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+20';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_21.jpg', 'Relay Race Handover')">
+                    <img src="sports_21.jpg" alt="Sports Image 21" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+21';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_22.jpg', 'Football Team Practice')">
+                    <img src="sports_22.jpg" alt="Sports Image 22" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+22';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_23.jpg', 'Gymnasium Equipment')">
+                    <img src="sports_23.jpg" alt="Sports Image 23" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+23';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_24.jpg', 'Zumba/Aerobics Class')">
+                    <img src="sports_24.jpg" alt="Sports Image 24" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+24';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Group 5: sports_25.jpg to sports_30.jpg -->
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_25.jpg', 'Inter-College Trophy Ceremony')">
+                    <img src="sports_25.jpg" alt="Sports Image 25" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+25';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_26.jpg', 'Students Jogging on Track')">
+                    <img src="sports_26.jpg" alt="Sports Image 26" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+26';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_27.jpg', 'Students Playing Carrom')">
+                    <img src="sports_27.jpg" alt="Sports Image 27" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+27';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_28.jpg', 'Throwball Match')">
+                    <img src="sports_28.jpg" alt="Sports Image 28" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+28';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_29.jpg', 'Group Warm-up Exercise')">
+                    <img src="sports_29.jpg" alt="Sports Image 29" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+29';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_30.jpg', 'Water Break During Practice')">
+                    <img src="sports_30.jpg" alt="Sports Image 30" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+30';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Group 6: sports_31.jpg to sports_36.jpg -->
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_31.jpg', 'Annual Awards Ceremony')">
+                    <img src="sports_31.jpg" alt="Sports Image 31" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+31';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_32.jpg', 'High Jump Event')">
+                    <img src="sports_32.jpg" alt="Sports Image 32" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+32';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_33.jpg', 'Students in Sports Uniforms')">
+                    <img src="sports_33.jpg" alt="Sports Image 33" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+33';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_34.jpg', 'Sports Coach Giving Instructions')">
+                    <img src="sports_34.jpg" alt="Sports Image 34" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+34';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_35.jpg', 'Students Playing Kho Kho')">
+                    <img src="sports_35.jpg" alt="Sports Image 35" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+35';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_36.jpg', 'Student Volunteers at Sports Event')">
+                    <img src="sports_36.jpg" alt="Sports Image 36" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+36';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Group 7: sports_37.jpg to sports_42.jpg -->
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_37.jpg', 'Student Group After Workout')">
+                    <img src="sports_37.jpg" alt="Sports Image 37" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+37';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_38.jpg', 'Gym Interior View')">
+                    <img src="sports_38.jpg" alt="Sports Image 38" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+38';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_39.jpg', 'Cricket Batting Practice')">
+                    <img src="sports_39.jpg" alt="Sports Image 39" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+39';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_40.jpg', 'Badminton Racket Close-up')">
+                    <img src="sports_40.jpg" alt="Sports Image 40" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+40';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_41.jpg', 'Shot Put Event')">
+                    <img src="sports_41.jpg" alt="Sports Image 41" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=S+41';">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('sports_42.jpg', 'Team Photo with Coach')">
+                    <img src="sports_42.jpg" alt="Sports Image 42" class="w-full h-32 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=S+42';">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <i class="fas fa-search-plus text-white text-2xl"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
 
-<!-- Footer -->
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" class="fixed inset-0 hidden items-center justify-center bg-black/90 transition-opacity p-4" onclick="closeLightbox()">
+    <div class="max-w-6xl max-h-[90vh] w-full" onclick="event.stopPropagation()">
+        <button class="absolute top-4 right-4 text-white text-4xl hover:text-primary transition duration-200 focus:outline-none" onclick="closeLightbox()">
+            &times;
+        </button>
+        <img id="lightbox-image" src="" alt="Gallery Image" class="max-w-full max-h-[80vh] w-auto h-auto mx-auto rounded-lg shadow-2xl object-contain">
+        <p id="lightbox-caption" class="text-white text-center mt-4 text-lg font-medium"></p>
+    </div>
+</div>
+<!-- End Lightbox Modal -->
+
+
+<!-- Reusable Footer Start -->
 <footer class="bg-footer text-white py-10">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
             
             <div class="space-y-4">
+                <!-- Logo link points to index.html -->
                 <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
                     <img 
                         src="logo.png" 
@@ -270,25 +527,19 @@
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="contact_us.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ADMISSION</a></li>
                     <li><a href="courses.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
-                    <li><a href="contact_us.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
                     <li><a href="about_institution.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
-                    <li><a href="gallery.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> GALLERY</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">QUICK LINKS</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> PLACEMENTS</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
                     <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
-                    <li><a href="hospitals.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITAL</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> INTERNSHIP</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> SOFT SKILLS LAB</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> TEACHING FACULTY</a></li>
+                    <li><a href="hospitals.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITALS</a></li>
                 </ul>
             </div>
 
@@ -312,19 +563,19 @@
         </div>
 
         <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
-            <p>&copy; Copyright Jubilee 2025. All rights reserved. 
+            <p>&copy; Copyright Jubilee 2025. All rights reserved.
                 <span class="ml-4 pl-4 border-l border-gray-700">Developed by Neocx Innovative Educations Private Limited</span>
                 <span class="ml-4 pl-4 border-l border-gray-700"><a href="privacy.html" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
             </p>
         </div>
     </div>
 </footer>
+<!-- Reusable Footer End -->
 
 <script>
-    // JavaScript for mobile menu toggling
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
         const menu = document.getElementById('mobile-menu');
-        // Toggle max-h classes for smooth transition
         if (menu.classList.contains('max-h-0')) {
             menu.classList.remove('max-h-0');
             menu.classList.add('max-h-screen');
@@ -333,6 +584,26 @@
             menu.classList.add('max-h-0');
         }
     });
+
+    // Lightbox Functions (Reused from Gallery)
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(imageSrc, captionText) {
+        lightboxImage.src = imageSrc;
+        lightboxCaption.textContent = captionText;
+        lightboxModal.classList.add('show');
+    }
+
+    function closeLightbox() {
+        lightboxModal.classList.remove('show');
+        // Clear content when closing for accessibility/performance
+        setTimeout(() => {
+            lightboxImage.src = '';
+            lightboxCaption.textContent = '';
+        }, 300); 
+    }
 </script>
 
 </body>
