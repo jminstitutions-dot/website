@@ -1,1 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jubilee Mission Group of Institutions - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #990000;
+            --color-secondary: #330033;
+            --color-footer: #2b2b2b;
+        }
+
+        html { font-family: 'Inter', sans-serif; }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .bg-secondary { background-color: var(--color-secondary); }
+        .text-secondary { color: var(--color-secondary); }
+        .bg-footer { background-color: var(--color-footer); }
+
+        /* Custom style for active link in campus page */
+        .nav-active {
+            color: var(--color-primary);
+            background-color: white;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Lightbox (kept here for consistency, though unused on this page) */
+        #lightbox-modal {
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 50;
+        }
+        #lightbox-modal.show {
+            opacity: 1;
+            pointer-events: auto;
+            display: flex; /* Override hidden */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#990000',
+                        secondary: '#330033',
+                        footer: '#2b2b2b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<!-- Existing Header -->
+<header class="bg-primary text-white text-sm hidden lg:block">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <div class="flex space-x-6">
+            <span class="flex items-center"><i class="fas fa-phone mr-2"></i> +91 9986433333</span>
+            <span class="flex items-center"><i class="fas fa-envelope mr-2"></i> jubileem123@gmail.com</span>
+            <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Bangalore - 560072</span>
+        </div>
+        <div class="flex space-x-4">
+            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/jubilee_mission_group/" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- Existing Navigation -->
+<nav class="bg-secondary shadow-lg">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-24">
+            <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
+                <img 
+                    src="logo.png" 
+                    alt="Jubilee Mission College Logo" 
+                    class="w-40 h-18 object-contain rounded-full" 
+                    onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
+                >
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-6 text-white">
+                <a href="index.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
+                <a href="about_institution.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">About Institution</a>
+                <a href="courses.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Courses</a>
+                <a href="campus.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Campus</a>
+                <a href="gallery.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Gallery</a>
+                <a href="contact_us.html" class="py-5 px-3 nav-active transition duration-300 font-bold">Contact Us</a>
+            </div>
+
+            <a href="contact_us.html" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
+                ADMISSION OPEN
+            </a>
+
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
+        <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
+        <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">About Institution</a>
+        <a href="courses.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Courses</a>
+        <a href="campus.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Campus</a>
+        <a href="gallery.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Gallery</a>
+        <a href="contact_us.html" class="block py-3 px-4 text-sm text-primary bg-white/10 transition duration-200 font-bold">Contact Us</a>
+        <a href="contact_us.html" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
+    </div>
+</nav>
+
+<main>
+    <!-- Page Title Banner -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-extrabold text-secondary mb-3">Reach Out to Jubilee Mission</h1>
+            <p class="text-xl text-gray-600">We are ready to answer your questions about admissions, programs, and campus visits.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-secondary text-center mb-12">
+                GET IN TOUCH
+            </h2>
+            <div class="max-w-4xl mx-auto p-8 bg-gray-50 rounded-xl shadow-2xl border border-gray-200">
+                <p class="text-center text-gray-700 mb-8">
+                    Fill out the form below for admissions inquiries, collaborations, or general questions.
+                </p>
+                <form id="contactForm" onsubmit="handleFormSubmit(event)" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-200" />
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="example@college.edu"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-200" />
+                    </div>
+
+                    <div class="col-span-1 md:col-span-2">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 999 864 3333"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-200" />
+                    </div>
+
+                    <div class="col-span-1 md:col-span-2">
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                        <select id="subject" name="subject" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white focus:ring-primary focus:border-primary transition duration-200">
+                            <option value="">Select Inquiry Type</option>
+                            <option value="Admission">Admission Inquiry</option>
+                            <option value="Course_Info">Course Information</option>
+                            <option value="Collaboration">Collaboration / Partnership</option>
+                            <option value="General">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="col-span-1 md:col-span-2">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Tell us how we can help you..."
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-200"></textarea>
+                    </div>
+
+                    <div class="col-span-1 md:col-span-2 text-center">
+                        <button type="submit"
+                                class="bg-primary hover:bg-red-700 text-white font-bold py-3 px-12 rounded-lg transition duration-300 shadow-lg transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <div id="form-message" class="mt-8 p-4 rounded-lg hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-primary text-center mb-12">
+                OUR LOCATION
+            </h2>
+            <div class="rounded-xl overflow-hidden shadow-2xl h-96 w-full max-w-6xl mx-auto border-4 border-white">
+                <iframe 
+                    src="https://maps.google.com/maps?q=12.96005217207747,77.51145142883477&hl=en&z=15&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p class="text-center text-lg text-gray-700 mt-6 font-medium">
+                **Campus Address:** #81, 3rd Cross, Near Fortis Hospital, Nagarbhavi, Bangalore - 560072
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<!-- Lightbox (kept for template consistency) -->
+<div id="lightbox-modal" class="fixed inset-0 hidden items-center justify-center bg-black/90 transition-opacity p-4" onclick="closeLightbox()">
+    <div class="max-w-6xl max-h-[90vh] w-full" onclick="event.stopPropagation()">
+        <button class="absolute top-4 right-4 text-white text-4xl hover:text-primary transition duration-200 focus:outline-none" onclick="closeLightbox()">
+            ×
+        </button>
+        <img id="lightbox-image" src="" alt="Gallery Image" class="max-w-full max-h-[80vh] w-auto h-auto mx-auto rounded-lg shadow-2xl object-contain">
+        <p id="lightbox-caption" class="text-white text-center mt-4 text-lg font-medium"></p>
+    </div>
+</div>
+<!-- Existing Footer -->
+<footer class="bg-footer text-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+            
+            <div class="space-y-4">
+                <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
+                    <img 
+                        src="logo.png" 
+                        alt="Jubilee Mission College Logo" 
+                        class="w-40 h-18 object-contain rounded-full"
+                        onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
+                    >
+                </a>
+                <p class="text-sm text-gray-400">
+                    Join Jubilee Mission Group of Institutions in Bangalore for quality healthcare education in BPT, Nursing, and Allied Health Sciences. Our programs combine hands-on training with a strong foundation in compassion, competence, and ethics—preparing you for a meaningful career across diverse healthcare fields. Discover your future with us.
+                </p>
+                <div class="flex space-x-4 pt-2">
+                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-facebook-f text-white"></i></a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-twitter text-white"></i></a>
+                    <a href="https://www.instagram.com/jubilee_mission_group/" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-instagram text-white"></i></a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-youtube text-white"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="courses.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
+                    <li><a href="about_institution.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">QUICK LINKS</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
+                    <li><a href="hospitals.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITALS</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">CONTACT US</h3>
+                <div class="space-y-4 text-sm text-gray-400">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-primary mt-1 mr-3 flex-shrink-0"></i>
+                        <p>#81, 3rd Cross, Near Fortis Hospital, Nagarbhavi, Bangalore - 560072</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-primary mr-3"></i>
+                        <p>+91 9998643333</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-primary mr-3"></i>
+                        <p>jubileem123@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
+            <p>© Copyright Jubilee 2025. All rights reserved.
+                <span class="ml-4 pl-4 border-l border-gray-700">Developed by Neocx Innovative Educations Private Limited</span>
+                <span class="ml-4 pl-4 border-l border-gray-700"><a href="privacy.html" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
+            </p>
+        </div>
+    </div>
+</footer>
+<script>
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        if (menu.classList.contains('max-h-0')) {
+            menu.classList.remove('max-h-0');
+            menu.classList.add('max-h-screen');
+        } else {
+            menu.classList.remove('max-h-screen');
+            menu.classList.add('max-h-0');
+        }
+    });
+
+    // Lightbox Functions (kept for template consistency)
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(imageSrc, captionText) {
+        lightboxImage.src = imageSrc;
+        lightboxCaption.textContent = captionText;
+        lightboxModal.classList.add('show');
+    }
+
+    function closeLightbox() {
+        lightboxModal.classList.remove('show');
+        // Clear content when closing for accessibility/performance
+        setTimeout(() => {
+            lightboxImage.src = '';
+            lightboxCaption.textContent = '';
+        }, 300); 
+    }
+
+    // Client-side form submission handler
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const messageDiv = document.getElementById('form-message');
+        const nameInput = document.getElementById('name');
+
+        // Simple validation check (can be expanded)
+        if (!nameInput.value.trim()) {
+            messageDiv.textContent = 'Please provide your full name.';
+            messageDiv.className = 'mt-8 p-4 rounded-lg text-red-600 bg-red-100 font-bold';
+            messageDiv.classList.remove('hidden');
+            return;
+        }
+
+        // Show success message
+        messageDiv.textContent = 'Thank you for your message! We will get back to you soon.';
+        messageDiv.className = 'mt-8 p-4 rounded-lg text-green-700 bg-green-100 font-bold';
+        messageDiv.classList.remove('hidden');
+
+        // Reset the form after successful (simulated) submission
+        document.getElementById('contactForm').reset();
+    }
+</script>
+
+</body>
+</html>
 
