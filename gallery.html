@@ -61,7 +61,6 @@
 </head>
 <body>
 
-<!-- Reusable Header/Navigation Start -->
 <header class="bg-primary text-white text-sm hidden lg:block">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
         <div class="flex space-x-6">
@@ -90,7 +89,6 @@
                 >
             </a>
 
-            <!-- Main navigation links: Gallery is active -->
             <div class="hidden lg:flex items-center space-x-6 text-white">
                 <a href="index.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
                 <a href="about_institution.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">About Institution</a>
@@ -110,7 +108,6 @@
         </div>
     </div>
 
-    <!-- Mobile menu links: Gallery is active -->
     <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
         <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
         <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">About Institution</a>
@@ -121,8 +118,6 @@
         <a href="contact_us.html" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
     </div>
 </nav>
-<!-- Reusable Header/Navigation End -->
-
 <main>
     <section class="bg-gray-100 py-16">
         <div class="container mx-auto px-4 text-center">
@@ -131,403 +126,344 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
             <div id="image-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 
-                <!-- 56 Gallery Images (1.jpg to 56.jpg) -->
-                
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('1.jpg', 'Campus Entrance/Main Building View')">
-                    <img src="1.jpg" alt="Gallery Image 1" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+1';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1fbyOsHJjMfsNRKm45eIopXCW5VGyP9BJ', 'Gallery Image 1')">
+                    <img src="https://drive.google.com/uc?export=view&id=1fbyOsHJjMfsNRKm45eIopXCW5VGyP9BJ" alt="Gallery Image 1" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('2.jpg', 'Lecture Hall in Use')">
-                    <img src="2.jpg" alt="Gallery Image 2" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+2';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1irOwcxsG_Go-77iIq8XGY7qtHgTVvqIX', 'Gallery Image 2')">
+                    <img src="https://drive.google.com/uc?export=view&id=1irOwcxsG_Go-77iIq8XGY7qtHgTVvqIX" alt="Gallery Image 2" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('3.jpg', 'Anatomy Lab Practical')">
-                    <img src="3.jpg" alt="Gallery Image 3" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+3';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1diiwyBr3QFHyh8Z2DGb40YtX84f-z9Ce', 'Gallery Image 3')">
+                    <img src="https://drive.google.com/uc?export=view&id=1diiwyBr3QFHyh8Z2DGb40YtX84f-z9Ce" alt="Gallery Image 3" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('4.jpg', 'Physiology Lab Demonstration')">
-                    <img src="4.jpg" alt="Gallery Image 4" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+4';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1CBmPqIdOe2JUWFexPh6wqh0EKtQNgezS', 'Gallery Image 4')">
+                    <img src="https://drive.google.com/uc?export=view&id=1CBmPqIdOe2JUWFexPh6wqh0EKtQNgezS" alt="Gallery Image 4" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('5.jpg', 'Nursing Ward Simulation')">
-                    <img src="5.jpg" alt="Gallery Image 5" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+5';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1rouOEHYcQQ20Do1L06ERXdTGTlODHEiL', 'Gallery Image 5')">
+                    <img src="https://drive.google.com/uc?export=view&id=1rouOEHYcQQ20Do1L06ERXdTGTlODHEiL" alt="Gallery Image 5" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('6.jpg', 'Physiotherapy Treatment Area')">
-                    <img src="6.jpg" alt="Gallery Image 6" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+6';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1NHKjkgVZtgIlden8VtJwuIQtUFLfMJ8H', 'Gallery Image 6')">
+                    <img src="https://drive.google.com/uc?export=view&id=1NHKjkgVZtgIlden8VtJwuIQtUFLfMJ8H" alt="Gallery Image 6" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('7.jpg', 'Library Reading Area')">
-                    <img src="7.jpg" alt="Gallery Image 7" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+7';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1RYX6YIB6Wh8ifZw9f9dPYRjiktbH4Bql', 'Gallery Image 7')">
+                    <img src="https://drive.google.com/uc?export=view&id=1RYX6YIB6Wh8ifZw9f9dPYRjiktbH4Bql" alt="Gallery Image 7" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('8.jpg', 'Computer Lab Session')">
-                    <img src="8.jpg" alt="Gallery Image 8" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+8';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1kmn71liL5z9W1ReOIjz_F8C48vFsiya_', 'Gallery Image 8')">
+                    <img src="https://drive.google.com/uc?export=view&id=1kmn71liL5z9W1ReOIjz_F8C48vFsiya_' alt="Gallery Image 8" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('9.jpg', 'Student Orientation Day')">
-                    <img src="9.jpg" alt="Gallery Image 9" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+9';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1mmQZcvE9Qi7cIHKzf54nZTcDJJXpLiyG', 'Gallery Image 9')">
+                    <img src="https://drive.google.com/uc?export=view&id=1mmQZcvE9Qi7cIHKzf54nZTcDJJXpLiyG" alt="Gallery Image 9" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('10.jpg', 'Cultural Fest Performance')">
-                    <img src="10.jpg" alt="Gallery Image 10" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+10';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1tPmPg-JH5bS7l01ibqmadgdTgsyq5vFO', 'Gallery Image 10')">
+                    <img src="https://drive.google.com/uc?export=view&id=1tPmPg-JH5bS7l01ibqmadgdTgsyq5vFO" alt="Gallery Image 10" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('11.jpg', 'Sports Meet Action Shot')">
-                    <img src="11.jpg" alt="Gallery Image 11" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+11';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1JmKbG8ispAnje0CzF5HQBQZeM3yVhzOy', 'Gallery Image 11')">
+                    <img src="https://drive.google.com/uc?export=view&id=1JmKbG8ispAnje0CzF5HQBQZeM3yVhzOy" alt="Gallery Image 11" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('12.jpg', 'Faculty Meeting/Discussion')">
-                    <img src="12.jpg" alt="Gallery Image 12" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+12';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1N3wEJTs7T15RHfbtC42e0Day8Q6igNVc', 'Gallery Image 12')">
+                    <img src="https://drive.google.com/uc?export=view&id=1N3wEJTs7T15RHfbtC42e0Day8Q6igNVc" alt="Gallery Image 12" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('13.jpg', 'Chairman\'s Welcome Speech')">
-                    <img src="13.jpg" alt="Gallery Image 13" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+13';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1E6DOI15B0ODMgON-zTDPY1KSg6N2B-I3', 'Gallery Image 13')">
+                    <img src="https://drive.google.com/uc?export=view&id=1E6DOI15B0ODMgON-zTDPY1KSg6N2B-I3" alt="Gallery Image 13" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('14.jpg', 'Graduation Day Group Photo')">
-                    <img src="14.jpg" alt="Gallery Image 14" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+14';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1h2n55izbqkQ-Ls3eNV7KDjIjSuZqEbMX', 'Gallery Image 14')">
+                    <img src="https://drive.google.com/uc?export=view&id=1h2n55izbqkQ-Ls3eNV7KDjIjSuZqEbMX" alt="Gallery Image 14" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('15.jpg', 'Hostel Common Area')">
-                    <img src="15.jpg" alt="Gallery Image 15" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+15';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=18u09ZtqSMXMtmF0CU5O0KHREq-vf99YL', 'Gallery Image 15')">
+                    <img src="https://drive.google.com/uc?export=view&id=18u09ZtqSMXMtmF0CU5O0KHREq-vf99YL" alt="Gallery Image 15" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('16.jpg', 'Hostel Mess/Dining Hall')">
-                    <img src="16.jpg" alt="Gallery Image 16" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+16';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1urVFTtA579tGaXhn42wMIAgCp3LOYfM2', 'Gallery Image 16')">
+                    <img src="https://drive.google.com/uc?export=view&id=1urVFTtA579tGaXhn42wMIAgCp3LOYfM2" alt="Gallery Image 16" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('17.jpg', 'Student Life on Campus (Outdoor)')">
-                    <img src="17.jpg" alt="Gallery Image 17" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+17';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1i1Ew4xIBp6x2ducgx_PPQdw_CJFI6F5_', 'Gallery Image 17')">
+                    <img src="https://drive.google.com/uc?export=view&id=1i1Ew4xIBp6x2ducgx_PPQdw_CJFI6F5_' alt="Gallery Image 17" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('18.jpg', 'Allied Health Dept. Seminar')">
-                    <img src="18.jpg" alt="Gallery Image 18" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+18';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=14I9puoaK0KhOj3r29Y6cVESe09zpMEOc', 'Gallery Image 18')">
+                    <img src="https://drive.google.com/uc?export=view&id=14I9puoaK0KhOj3r29Y6cVESe09zpMEOc" alt="Gallery Image 18" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('19.jpg', 'BPT Students in Clinical Rotation')">
-                    <img src="19.jpg" alt="Gallery Image 19" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+19';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1G27HafC54W3QvwgrO2P7LmifuY6Dqt1L', 'Gallery Image 19')">
+                    <img src="https://drive.google.com/uc?export=view&id=1G27HafC54W3QvwgrO2P7LmifuY6Dqt1L" alt="Gallery Image 19" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('20.jpg', 'Nursing Students in Hospital')">
-                    <img src="20.jpg" alt="Gallery Image 20" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+20';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1BZsFhA0pCEAF8AhFMTq7a2WiSirBiejh', 'Gallery Image 20')">
+                    <img src="https://drive.google.com/uc?export=view&id=1BZsFhA0pCEAF8AhFMTq7a2WiSirBiejh" alt="Gallery Image 20" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('21.jpg', 'Community Outreach Event')">
-                    <img src="21.jpg" alt="Gallery Image 21" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+21';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1PYw9XQyCvi8BMq3TCBEGpwIDZtudvo5S', 'Gallery Image 21')">
+                    <img src="https://drive.google.com/uc?export=view&id=1PYw9XQyCvi8BMq3TCBEGpwIDZtudvo5S" alt="Gallery Image 21" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('22.jpg', 'Blood Donation Camp')">
-                    <img src="22.jpg" alt="Gallery Image 22" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+22';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1-qbuj51gkXEpjLuB7ZJMbkcRwUB55mr5', 'Gallery Image 22')">
+                    <img src="https://drive.google.com/uc?export=view&id=1-qbuj51gkXEpjLuB7ZJMbkcRwUB55mr5" alt="Gallery Image 22" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('23.jpg', 'Group Study Session')">
-                    <img src="23.jpg" alt="Gallery Image 23" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+23';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1gmI3nx8p8wf3nvXu7jvUwM4bQkqLNkfL', 'Gallery Image 23')">
+                    <img src="https://drive.google.com/uc?export=view&id=1gmI3nx8p8wf3nvXu7jvUwM4bQkqLNkfL" alt="Gallery Image 23" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('24.jpg', 'Inter-college Competition')">
-                    <img src="24.jpg" alt="Gallery Image 24" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+24';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=11XJXCdmdgalPDSAPKPbzox0fzp3_AkBQ', 'Gallery Image 24')">
+                    <img src="https://drive.google.com/uc?export=view&id=11XJXCdmdgalPDSAPKPbzox0fzp3_AkBQ" alt="Gallery Image 24" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('25.jpg', 'Workshop/Training Session')">
-                    <img src="25.jpg" alt="Gallery Image 25" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+25';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=10KF7pHGL0kbQFZWCQNv5ezHaRfH1BN8F', 'Gallery Image 25')">
+                    <img src="https://drive.google.com/uc?export=view&id=10KF7pHGL0kbQFZWCQNv5ezHaRfH1BN8F" alt="Gallery Image 25" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('26.jpg', 'Research Poster Presentation')">
-                    <img src="26.jpg" alt="Gallery Image 26" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+26';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1z2a-wOtqjNsZSbcbUyi5W5Er2qS7Ks4o', 'Gallery Image 26')">
+                    <img src="https://drive.google.com/uc?export=view&id=1z2a-wOtqjNsZSbcbUyi5W5Er2qS7Ks4o" alt="Gallery Image 26" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('27.jpg', 'Laboratory Equipment Close-up')">
-                    <img src="27.jpg" alt="Gallery Image 27" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+27';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1SvNVZtkuMIkaY2TWZgF7erhQt5DB7fqW', 'Gallery Image 27')">
+                    <img src="https://drive.google.com/uc?export=view&id=1SvNVZtkuMIkaY2TWZgF7erhQt5DB7fqW" alt="Gallery Image 27" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('28.jpg', 'Campus Gardens/Greenery')">
-                    <img src="28.jpg" alt="Gallery Image 28" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+28';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1q1BoTB6Hl8tpYCCe37JCuLHAMGgT4z8b', 'Gallery Image 28')">
+                    <img src="https://drive.google.com/uc?export=view&id=1q1BoTB6Hl8tpYCCe37JCuLHAMGgT4z8b" alt="Gallery Image 28" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('29.jpg', 'Administrative Block')">
-                    <img src="29.jpg" alt="Gallery Image 29" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+29';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1_oNCn6zqgmpoXfv13QheJc1GyGbGRStF', 'Gallery Image 29')">
+                    <img src="https://drive.google.com/uc?export=view&id=1_oNCn6zqgmpoXfv13QheJc1GyGbGRStF" alt="Gallery Image 29" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('30.jpg', 'Student Grievance Cell')">
-                    <img src="30.jpg" alt="Gallery Image 30" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+30';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1VlGpB0oNbTtgAHZoQQee0Dqfaaw5G_2Q', 'Gallery Image 30')">
+                    <img src="https://drive.google.com/uc?export=view&id=1VlGpB0oNbTtgAHZoQQee0Dqfaaw5G_2Q" alt="Gallery Image 30" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('31.jpg', 'Exam Preparation Moment')">
-                    <img src="31.jpg" alt="Gallery Image 31" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+31';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1iVMqAHdzPELxW6nkivBlU9MXiM_fAyDB', 'Gallery Image 31')">
+                    <img src="https://drive.google.com/uc?export=view&id=1iVMqAHdzPELxW6nkivBlU9MXiM_fAyDB" alt="Gallery Image 31" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('32.jpg', 'Alumni Reunion Photo')">
-                    <img src="32.jpg" alt="Gallery Image 32" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+32';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1htLvPFFgoGbAGpBAYVfvArG9w-Wx3reu', 'Gallery Image 32')">
+                    <img src="https://drive.google.com/uc?export=view&id=1htLvPFFgoGbAGpBAYVfvArG9w-Wx3reu" alt="Gallery Image 32" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('33.jpg', 'Guest Lecture Series')">
-                    <img src="33.jpg" alt="Gallery Image 33" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+33';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=173MFpv8ZYKe0geSgGIU4MmnpPEjkWVxh', 'Gallery Image 33')">
+                    <img src="https://drive.google.com/uc?export=view&id=173MFpv8ZYKe0geSgGIU4MmnpPEjkWVxh" alt="Gallery Image 33" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('34.jpg', 'Hospital Affiliation Signage')">
-                    <img src="34.jpg" alt="Gallery Image 34" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+34';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=12El8Z1r5yFlKyTDuzjcjXzjejOF59Y3B', 'Gallery Image 34')">
+                    <img src="https://drive.google.com/uc?export=view&id=12El8Z1r5yFlKyTDuzjcjXzjejOF59Y3B" alt="Gallery Image 34" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('35.jpg', 'Emergency Care Training')">
-                    <img src="35.jpg" alt="Gallery Image 35" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+35';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1RgztvqlMGAREP6h2iWsO5mxJwh8g7h-a', 'Gallery Image 35')">
+                    <img src="https://drive.google.com/uc?export=view&id=1RgztvqlMGAREP6h2iWsO5mxJwh8g7h-a" alt="Gallery Image 35" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('36.jpg', 'Pediatric Nursing Practice')">
-                    <img src="36.jpg" alt="Gallery Image 36" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+36';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1aOENeR4cdsUq9xzTcOclAC3CkZp5Loud', 'Gallery Image 36')">
+                    <img src="https://drive.google.com/uc?export=view&id=1aOENeR4cdsUq9xzTcOclAC3CkZp5Loud" alt="Gallery Image 36" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('37.jpg', 'Orthopedic Physiotherapy')">
-                    <img src="37.jpg" alt="Gallery Image 37" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+37';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=11qjGQw1nJVNPCVXHIkyhDE8TUu9Jfa1O', 'Gallery Image 37')">
+                    <img src="https://drive.google.com/uc?export=view&id=11qjGQw1nJVNPCVXHIkyhDE8TUu9Jfa1O" alt="Gallery Image 37" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('38.jpg', 'Neurological Rehabilitation')">
-                    <img src="38.jpg" alt="Gallery Image 38" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+38';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1vsXt2GSL9taoSdYr4yfyNf8MOGSuIY_z', 'Gallery Image 38')">
+                    <img src="https://drive.google.com/uc?export=view&id=1vsXt2GSL9taoSdYr4yfyNf8MOGSuIY_z" alt="Gallery Image 38" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('39.jpg', 'Operation Theatre Technology Class')">
-                    <img src="39.jpg" alt="Gallery Image 39" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+39';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1Jv-bsI4f4n1sQPQwZZtuuK4eyFC0lrDo', 'Gallery Image 39')">
+                    <img src="https://drive.google.com/uc?export=view&id=1Jv-bsI4f4n1sQPQwZZtuuK4eyFC0lrDo" alt="Gallery Image 39" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('40.jpg', 'Dialysis Technology Lab')">
-                    <img src="40.jpg" alt="Gallery Image 40" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+40';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1MJsbWf1uIh7VVp3rOstmpQTnKLudeWkc', 'Gallery Image 40')">
+                    <img src="https://drive.google.com/uc?export=view&id=1MJsbWf1uIh7VVp3rOstmpQTnKLudeWkc" alt="Gallery Image 40" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('41.jpg', 'Medical Imaging Training')">
-                    <img src="41.jpg" alt="Gallery Image 41" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+41';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1tQ5Cp5BwzPEXrGdkcYJ8nG5ByFAQXkJW', 'Gallery Image 41')">
+                    <img src="https://drive.google.com/uc?export=view&id=1tQ5Cp5BwzPEXrGdkcYJ8nG5ByFAQXkJW" alt="Gallery Image 41" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('42.jpg', 'Anesthesia Technology Demo')">
-                    <img src="42.jpg" alt="Gallery Image 42" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+42';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=125ebJ89gHdC2sUesSUhKSspYTmrqyDVw', 'Gallery Image 42')">
+                    <img src="https://drive.google.com/uc?export=view&id=125ebJ89gHdC2sUesSUhKSspYTmrqyDVw" alt="Gallery Image 42" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('43.jpg', 'First-aid and CPR Training')">
-                    <img src="43.jpg" alt="Gallery Image 43" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+43';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=19WYYK5CUuiQ8lrR75JoFXscE1JWxuegZ', 'Gallery Image 43')">
+                    <img src="https://drive.google.com/uc?export=view&id=19WYYK5CUuiQ8lrR75JoFXscE1JWxuegZ" alt="Gallery Image 43" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('44.jpg', 'Student Group Photo (Informal)')">
-                    <img src="44.jpg" alt="Gallery Image 44" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+44';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1yQUgHiCFfmCNS5IPdl9k1TVlJZPFyuLl', 'Gallery Image 44')">
+                    <img src="https://drive.google.com/uc?export=view&id=1yQUgHiCFfmCNS5IPdl9k1TVlJZPFyuLl" alt="Gallery Image 44" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('45.jpg', 'Birthday Celebration on Campus')">
-                    <img src="45.jpg" alt="Gallery Image 45" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+45';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1Nah3YLN9PzIciP5YbysCVXbz-QoAuFwo', 'Gallery Image 45')">
+                    <img src="https://drive.google.com/uc?export=view&id=1Nah3YLN9PzIciP5YbysCVXbz-QoAuFwo" alt="Gallery Image 45" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('46.jpg', 'Festive Decoration on Campus')">
-                    <img src="46.jpg" alt="Gallery Image 46" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+46';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1FMAbmnCDqvxdym1ppDbRjacraRjQw_zY', 'Gallery Image 46')">
+                    <img src="https://drive.google.com/uc?export=view&id=1FMAbmnCDqvxdym1ppDbRjacraRjQw_zY" alt="Gallery Image 46" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('47.jpg', 'Students volunteering')">
-                    <img src="47.jpg" alt="Gallery Image 47" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+47';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1lZoPMAR9_uOFjiFVtsiEn9zGmlskpy0j', 'Gallery Image 47')">
+                    <img src="https://drive.google.com/uc?export=view&id=1lZoPMAR9_uOFjiFVtsiEn9zGmlskpy0j" alt="Gallery Image 47" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('48.jpg', 'Educational Field Trip')">
-                    <img src="48.jpg" alt="Gallery Image 48" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+48';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1o9PLaWa4_7XUHwXJ-cOhL2IJbvCCrCnz', 'Gallery Image 48')">
+                    <img src="https://drive.google.com/uc?export=view&id=1o9PLaWa4_7XUHwXJ-cOhL2IJbvCCrCnz" alt="Gallery Image 48" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('49.jpg', 'Entrance Exam Coaching Class')">
-                    <img src="49.jpg" alt="Gallery Image 49" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+49';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1EFsLhWR2N9Ud7DIAMVrdE0boz2KBojwI', 'Gallery Image 49')">
+                    <img src="https://drive.google.com/uc?export=view&id=1EFsLhWR2N9Ud7DIAMVrdE0boz2KBojwI" alt="Gallery Image 49" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('50.jpg', 'Placement Drive Day')">
-                    <img src="50.jpg" alt="Gallery Image 50" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+50';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1bk69AJtt78GPiVJ_wsY1zzPqkuv9s9ur', 'Gallery Image 50')">
+                    <img src="https://drive.google.com/uc?export=view&id=1bk69AJtt78GPiVJ_wsY1zzPqkuv9s9ur" alt="Gallery Image 50" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('51.jpg', 'Counseling Session Area')">
-                    <img src="51.jpg" alt="Gallery Image 51" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+51';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1wL-7Hoql7OKZNtgIVwMVcm8sxI9Oy1Iv', 'Gallery Image 51')">
+                    <img src="https://drive.google.com/uc?export=view&id=1wL-7Hoql7OKZNtgIVwMVcm8sxI9Oy1Iv" alt="Gallery Image 51" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('52.jpg', 'Mentorship Program Meeting')">
-                    <img src="52.jpg" alt="Gallery Image 52" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+52';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1aiztEXe1FYiAllJnG0XbRTp8IL5H-bQI', 'Gallery Image 52')">
+                    <img src="https://drive.google.com/uc?export=view&id=1aiztEXe1FYiAllJnG0XbRTp8IL5H-bQI" alt="Gallery Image 52" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('53.jpg', 'Campus Security Team')">
-                    <img src="53.jpg" alt="Gallery Image 53" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/330033/ffffff?text=Image+53';">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1QeGr7L8JxrtPqwpo-mBmUR6H2SRp3Kp6', 'Gallery Image 53')">
+                    <img src="https://drive.google.com/uc?export=view&id=1QeGr7L8JxrtPqwpo-mBmUR6H2SRp3Kp6" alt="Gallery Image 53" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('54.jpg', 'Transportation/Bus Facility')">
-                    <img src="54.jpg" alt="Gallery Image 54" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/990000/ffffff?text=Image+54';">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1izUh_1h4gmuvvihFZhQcXvWjLXFl1BKz', 'Gallery Image 54')">
+                    <img src="https://drive.google.com/uc?export=view&id=1izUh_1h4gmuvvihFZhQcXvWjLXFl1BKz" alt="Gallery Image 54" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('55.jpg', 'Evening View of Campus')">
-                    <img src="55.jpg" alt="Gallery Image 55" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/000000/ffffff?text=Image+55';">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1pVd1-pD_EdldWP4P3JfZInKbQnZJ7wzC', 'Gallery Image 55')">
+                    <img src="https://drive.google.com/uc?export=view&id=1pVd1-pD_EdldWP4P3JfZInKbQnZJ7wzC" alt="Gallery Image 55" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" onclick="openLightbox('56.jpg', 'Group of faculty and students')">
-                    <img src="56.jpg" alt="Gallery Image 56" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x300/6b7280/ffffff?text=Image+56';">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                        <i class="fas fa-search-plus text-white text-3xl"></i>
-                    </div>
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://drive.google.com/uc?export=view&id=1LmCBFNg34psPy_LoV03sAhYnBpUkQECF', 'Gallery Image 56')">
+                    <img src="https://drive.google.com/uc?export=view&id=1LmCBFNg34psPy_LoV03sAhYnBpUkQECF" alt="Gallery Image 56" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
             </div>
@@ -535,7 +471,6 @@
     </section>
 </main>
 
-<!-- Lightbox Modal -->
 <div id="lightbox-modal" class="fixed inset-0 hidden items-center justify-center bg-black/90 transition-opacity p-4" onclick="closeLightbox()">
     <div class="max-w-6xl max-h-[90vh] w-full" onclick="event.stopPropagation()">
         <button class="absolute top-4 right-4 text-white text-4xl hover:text-primary transition duration-200 focus:outline-none" onclick="closeLightbox()">
@@ -545,16 +480,11 @@
         <p id="lightbox-caption" class="text-white text-center mt-4 text-lg font-medium"></p>
     </div>
 </div>
-<!-- End Lightbox Modal -->
-
-
-<!-- Reusable Footer Start -->
 <footer class="bg-footer text-white py-10">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
             
             <div class="space-y-4">
-                <!-- Logo link points to index.html -->
                 <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
                     <img 
                         src="logo.png" 
@@ -620,8 +550,6 @@
         </div>
     </div>
 </footer>
-<!-- Reusable Footer End -->
-
 <script>
     // Mobile Menu Toggle
     document.getElementById('mobile-menu-button').addEventListener('click', function () {
@@ -658,4 +586,3 @@
 
 </body>
 </html>
-
