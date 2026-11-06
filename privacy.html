@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jubilee Mission Group of Institutions - Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="site.css">
+    <style>
+        :root {
+            --color-primary: #990000;
+            --color-secondary: #330033;
+            --color-footer: #2b2b2b;
+        }
 
+        html { font-family: 'Inter', sans-serif; }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .bg-secondary { background-color: var(--color-secondary); }
+        .text-secondary { color: var(--color-secondary); }
+        .bg-footer { background-color: var(--color-footer); }
+
+        .hero-banner {
+            /* FIXED: Reverting to the local file path. Ensure 'hero_banner.png' is in the root directory. */
+            background-image: url('hero_banner.png');
+            background-color: #f7f7f7;
+            background-size: cover;
+            background-position: center center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .hero-banner {
+                background-position: 20% center;
+            }
+        }
+
+        .program-title {
+            background-color: var(--color-secondary);
+            color: white;
+            text-align: center;
+            padding: 0.75rem 0;
+            font-weight: 600;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#990000',
+                        secondary: '#330033',
+                        footer: '#2b2b2b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header class="bg-primary text-white text-sm hidden lg:block">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <div class="flex space-x-6">
+            <a href="tel:+919986433333" class="flex items-center hover:text-gray-200"><i class="fas fa-phone mr-2"></i> +91 9986433333</a>
+            <a href="mailto:jubileem123@gmail.com" class="flex items-center hover:text-gray-200"><i class="fas fa-envelope mr-2"></i> jubileem123@gmail.com</a>
+            <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Bangalore - 560072</span>
+        </div>
+        <div class="flex space-x-4">
+            <a href="https://www.instagram.com/jubilee_mission_group/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</header>
+
+<nav class="bg-secondary shadow-lg relative z-40">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-20 lg:h-24 gap-4">
+            <a href="index.html" class="flex items-center flex-shrink-0">
+                <img src="logo.png" alt="Jubilee Mission Group of Institutions" class="h-14 lg:h-16 w-auto object-contain">
+            </a>
+
+            <div class="hidden lg:flex items-center gap-1 xl:gap-2 text-white text-sm xl:text-base whitespace-nowrap">
+                <a href="index.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Home</a>
+                <a href="about_institution.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">About Institution</a>
+                <a href="courses.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Courses</a>
+                <a href="campus.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Campus</a>
+                <a href="gallery.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Gallery</a>
+                <a href="contact_us.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Contact Us</a>
+                <a href="https://samuelduraivel.github.io/livestream/" target="_blank" rel="noopener" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Live Class</a>
+            </div>
+
+            <a href="contact_us.html" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-4 xl:px-6 rounded-lg transition duration-300 shadow-md hidden lg:block whitespace-nowrap text-sm xl:text-base">
+                ADMISSION OPEN
+            </a>
+
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none p-2" aria-label="Open menu" aria-controls="mobile-menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
+        <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Home</a>
+        <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">About Institution</a>
+        <a href="courses.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Courses</a>
+        <a href="campus.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Campus</a>
+        <a href="gallery.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Gallery</a>
+        <a href="contact_us.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Contact Us</a>
+        <a href="https://samuelduraivel.github.io/livestream/" target="_blank" rel="noopener" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Live Class</a>
+        <a href="contact_us.html" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
+    </div>
+</nav>
+
+<main>
+    <section class="bg-gray-100 py-12 md:py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-secondary mb-3">Privacy Policy</h1>
+            <p class="text-lg text-gray-600">How Jubilee Mission Group of Institutions handles information shared through this website.</p>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl space-y-8 text-gray-700 leading-relaxed">
+            <div>
+                <h2 class="text-2xl font-bold text-secondary mb-3">Information we collect</h2>
+                <p>When you submit the admission inquiry form on our Contact Us page, we receive the details you enter, such as your name, phone number, email address and message. We use this information only to respond to your inquiry and to guide you through the admission process.</p>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-secondary mb-3">How we use and share it</h2>
+                <p>We do not sell or rent your personal information. It is shared only with staff of Jubilee Mission Group of Institutions who handle admissions and student queries, or where required by law.</p>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-secondary mb-3">Third-party services</h2>
+                <p>This website uses services from other providers: the inquiry form is processed by Google Apps Script, our location is shown with Google Maps, videos are played through YouTube, and some photos are hosted on Google. These providers may collect technical information such as your IP address or cookies under their own privacy policies.</p>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-secondary mb-3">Your choices</h2>
+                <p>You can ask us to correct or delete the information you have sent us at any time by writing to <a href="mailto:jubileem123@gmail.com" class="text-primary font-semibold hover:underline">jubileem123@gmail.com</a>.</p>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-secondary mb-3">Contact</h2>
+                <p>Jubilee Mission Group of Institutions, #81, 3rd Cross, Near Fortis Hospital, Nagarbhavi, Bangalore - 560072.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-footer text-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="space-y-4">
+                <a href="index.html" class="inline-block">
+                    <img src="logo.png" alt="Jubilee Mission Group of Institutions" class="h-16 w-auto object-contain">
+                </a>
+                <p class="text-sm text-gray-400">
+                    Join Jubilee Mission Group of Institutions in Bangalore for quality healthcare education in BPT, Nursing, and Allied Health Sciences. Our programs combine hands-on training with a strong foundation in compassion, competence, and ethics—preparing you for a meaningful career across diverse healthcare fields. Discover your future with us.
+                </p>
+                <div class="flex space-x-4 pt-2">
+                    <a href="https://www.instagram.com/jubilee_mission_group/" target="_blank" rel="noopener" aria-label="Instagram" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-instagram text-white"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="courses.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
+                    <li><a href="contact_us.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ADMISSIONS &amp; CONTACT</a></li>
+                    <li><a href="about_institution.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
+                    <li><a href="gallery.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> GALLERY</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">QUICK LINKS</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="campus.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
+                    <li><a href="https://samuelduraivel.github.io/livestream/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIVE CLASS</a></li>
+                    <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> PRIVACY POLICY</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">CONTACT US</h3>
+                <div class="space-y-4 text-sm text-gray-400">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-3 flex-shrink-0"></i>
+                        <p>#81, 3rd Cross, Near Fortis Hospital, Nagarbhavi, Bangalore - 560072</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-red-500 mr-3"></i>
+                        <a href="tel:+919998643333" class="hover:text-white">+91 9998643333</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-red-500 mr-3"></i>
+                        <a href="mailto:jubileem123@gmail.com" class="hover:text-white break-all">jubileem123@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-300 flex flex-col md:flex-row md:justify-center items-center gap-2 md:gap-0 md:divide-x md:divide-gray-700 text-center">
+            <p class="md:px-4">&copy; Copyright Jubilee 2025. All rights reserved.</p>
+            <p class="md:px-4">Developed by Neocx Innovative Educations Private Limited</p>
+            <p class="md:px-4"><a href="privacy.html" class="hover:text-white transition duration-200">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        const open = menu.classList.toggle('max-h-screen');
+        menu.classList.toggle('max-h-0', !open);
+        this.setAttribute('aria-expanded', open);
+    });
+</script>
+</body>
+</html>

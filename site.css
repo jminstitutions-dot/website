@@ -1,0 +1,26 @@
+/* Shared styles for every page */
+html { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+img, iframe, video { max-width: 100%; }
+
+/* Inner-page banner: scales with content instead of a fixed viewport height */
+.page-hero {
+    min-height: 220px;
+    padding: 3rem 1rem;
+}
+@media (min-width: 768px) {
+    .page-hero { min-height: 300px; }
+}
+
+/* Lightbox (campus + gallery) */
+#lightbox-modal {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 60;
+}
+#lightbox-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+}
