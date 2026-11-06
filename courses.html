@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses Offered | Jubilee Mission Group of Institutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="site.css">
     <style>
         /* Custom Tailwind Configuration for Colors and Font */
         :root {
@@ -32,10 +35,10 @@
         /* Hero banner for the sub-page */
         .page-hero {
             background-color: var(--color-secondary);
-            background-image: linear-gradient(rgba(51, 0, 51, 0.8), rgba(51, 0, 51, 0.8)), url('https://placehold.co/1200x400/990000/ffffff?text=Academic+Excellence');
+            background-image: linear-gradient(rgba(51, 0, 51, 0.8), rgba(51, 0, 51, 0.8)), url('about_hero.jpg');
             background-size: cover;
             background-position: center;
-            height: 30vh;
+            
         }
 
         /* Card specific styling for icons */
@@ -71,67 +74,54 @@
 </head>
 <body>
 
-<!-- Header (Top Bar) -->
 <header class="bg-primary text-white text-sm hidden lg:block">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
         <div class="flex space-x-6">
-            <span class="flex items-center"><i class="fas fa-phone mr-2"></i> +91 9986433333</span>
-            <span class="flex items-center"><i class="fas fa-envelope mr-2"></i> jubileem123@gmail.com</span>
+            <a href="tel:+919986433333" class="flex items-center hover:text-gray-200"><i class="fas fa-phone mr-2"></i> +91 9986433333</a>
+            <a href="mailto:jubileem123@gmail.com" class="flex items-center hover:text-gray-200"><i class="fas fa-envelope mr-2"></i> jubileem123@gmail.com</a>
             <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Bangalore - 560072</span>
         </div>
         <div class="flex space-x-4">
-            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-twitter"></i></a>
-            <!-- FIXED: Instagram URL -->
-            <a href="https://www.instagram.com/jubilee_mission_group/" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/jubilee_mission_group/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
 </header>
 
-<!-- Navigation Bar -->
-<nav class="bg-secondary shadow-lg">
+<nav class="bg-secondary shadow-lg relative z-40">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center h-24"> 
-            <!-- FIXED: Logo link to index.html -->
-            <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
-                <img 
-                    src="logo.png" 
-                    alt="Jubilee Mission College Logo" 
-                    class="w-40 h-18 object-contain rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
-                >
+        <div class="flex justify-between items-center h-20 lg:h-24 gap-4">
+            <a href="index.html" class="flex items-center flex-shrink-0">
+                <img src="logo.png" alt="Jubilee Mission Group of Institutions" class="h-14 lg:h-16 w-auto object-contain">
             </a>
 
-            <!-- FIXED: Navigation structure, links, names, and removing Blogs -->
-            <div class="hidden lg:flex items-center space-x-6 text-white">
-                <a href="index.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
-                <a href="about_institution.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">About Institution</a>
-                <a href="courses.html" class="py-5 px-3 text-primary bg-white/10 transition duration-300 font-bold rounded-md">Courses</a>
-                <a href="campus.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Campus</a>
-                <a href="gallery.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Gallery</a>
-                <a href="contact_us.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Contact Us</a>
+            <div class="hidden lg:flex items-center gap-1 xl:gap-2 text-white text-sm xl:text-base whitespace-nowrap">
+                <a href="index.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Home</a>
+                <a href="about_institution.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">About Institution</a>
+                <a href="courses.html" aria-current="page" class="py-2 px-3 rounded-md bg-white text-primary font-bold shadow">Courses</a>
+                <a href="campus.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Campus</a>
+                <a href="gallery.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Gallery</a>
+                <a href="contact_us.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Contact Us</a>
+                <a href="https://samuelduraivel.github.io/livestream/" target="_blank" rel="noopener" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Live Class</a>
             </div>
 
-            <!-- FIXED: Admission link -->
-            <a href="contact_us.html" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
+            <a href="contact_us.html" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-4 xl:px-6 rounded-lg transition duration-300 shadow-md hidden lg:block whitespace-nowrap text-sm xl:text-base">
                 ADMISSION OPEN
             </a>
-            
-            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none p-2" aria-label="Open menu" aria-controls="mobile-menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <!-- FIXED: Mobile menu structure, links, names, and removing Blogs -->
     <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
-        <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
-        <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">About Institution</a>
-        <a href="courses.html" class="block py-3 px-4 text-sm text-primary bg-white/10 transition duration-200 font-bold">Courses</a>
-        <a href="campus.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Campus</a>
-        <a href="gallery.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Gallery</a>
-        <a href="contact_us.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Contact Us</a>
+        <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Home</a>
+        <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">About Institution</a>
+        <a href="courses.html" aria-current="page" class="block py-3 px-4 text-sm bg-white text-primary font-bold">Courses</a>
+        <a href="campus.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Campus</a>
+        <a href="gallery.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Gallery</a>
+        <a href="contact_us.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Contact Us</a>
+        <a href="https://samuelduraivel.github.io/livestream/" target="_blank" rel="noopener" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Live Class</a>
         <a href="contact_us.html" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
     </div>
 </nav>
@@ -139,7 +129,7 @@
 <main>
     <!-- Page Hero Banner -->
     <section class="page-hero flex items-center justify-center">
-        <h1 class="text-5xl font-extrabold text-white text-center tracking-wider">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center tracking-wider">
             Our Academic Programs
         </h1>
     </section>
@@ -162,100 +152,100 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Course Card 1: Nursing -->
-                <div class="bg-white rounded-xl shadow-2xl p-6 border-t-8 border-primary transform hover:scale-[1.02] transition duration-300">
+                <div class="bg-white rounded-xl shadow-2xl p-6 border-t-8 border-primary transform hover:scale-[1.02] transition duration-300 flex flex-col">
                     <div class="flex items-start mb-6">
                         <div class="course-icon">
                             <i class="fas fa-hospital-user text-2xl"></i>
                         </div>
                         <!-- Highlight the Course -->
-                        <h3 class="text-3xl font-bold text-secondary ml-4 pt-1">Nursing Programs</h3>
+                        <h3 class="text-2xl font-bold text-secondary ml-4 pt-1 leading-tight">Nursing Programs</h3>
                     </div>
                     
                     <img 
-                        src="nursing_college_building.jpg" 
+                        src="allied_health.jpg" loading="lazy" 
                         alt="Jubilee Mission College of Nursing" 
                         class="w-full h-48 object-cover rounded-lg mb-4"
                         onerror="this.onerror=null; this.src='https://placehold.co/400x192/330033/ffffff?text=Jubilee+Mission+College+of+Nursing';"
                     >
                     
                     <p class="text-gray-700 mb-6 text-base">
-                        **The Backbone of Patient Care.** These programs are offered through the **Jubilee Mission College of Nursing**. We focus on developing compassionate, skilled, and evidence-based practitioners, providing intensive training in clinical procedures, critical care, and professional ethics.
+                        <strong>The Backbone of Patient Care.</strong> These programs are offered through the <strong>Jubilee Mission College of Nursing</strong>. We focus on developing compassionate, skilled, and evidence-based practitioners, providing intensive training in clinical procedures, critical care, and professional ethics.
                     </p>
                     
                     <p class="text-sm font-semibold text-gray-800 mb-4">Programs typically offered:</p>
-                    <ul class="text-sm text-gray-600 list-disc list-inside space-y-1 ml-4">
+                    <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1 mb-6">
                         <li>B.Sc. Nursing (4 Years)</li>
                         <li>Post Basic B.Sc. Nursing (2 Years)</li>
                         <li>GNM (General Nursing and Midwifery)</li>
                     </ul>
                     
-                    <a href="contact_us.html" class="inline-block bg-secondary hover:bg-gray-800 text-white font-semibold py-2 px-5 rounded-lg mt-6 transition duration-300">
+                    <a href="contact_us.html" class="self-start mt-auto inline-block bg-secondary hover:bg-gray-800 text-white font-semibold py-2 px-5 rounded-lg transition duration-300">
                         View Detailed Curriculum <i class="fas fa-arrow-right ml-2 text-sm"></i>
                     </a>
                 </div>
 
                 <!-- Course Card 2: BPT (Physiotherapy) -->
-                <div class="bg-white rounded-xl shadow-2xl p-6 border-t-8 border-primary transform hover:scale-[1.02] transition duration-300">
+                <div class="bg-white rounded-xl shadow-2xl p-6 border-t-8 border-primary transform hover:scale-[1.02] transition duration-300 flex flex-col">
                     <div class="flex items-start mb-6">
                         <div class="course-icon">
                             <i class="fas fa-wheelchair-move text-2xl"></i>
                         </div>
                         <!-- Highlight the Course -->
-                        <h3 class="text-3xl font-bold text-secondary ml-4 pt-1">BPT (Physiotherapy)</h3>
+                        <h3 class="text-2xl font-bold text-secondary ml-4 pt-1 leading-tight">BPT (Physiotherapy)</h3>
                     </div>
                     
                     <img 
-                        src="physio_institute_building.jpg" 
+                        src="bpt_student.png" loading="lazy" 
                         alt="Jubilee Mission Institute of Physiotherapy" 
                         class="w-full h-48 object-cover rounded-lg mb-4"
                         onerror="this.onerror=null; this.src='https://placehold.co/400x192/990000/ffffff?text=Jubilee+Mission+Institute+of+Physiotherapy';"
                     >
                     
                     <p class="text-gray-700 mb-6 text-base">
-                        **Restoring Movement and Quality of Life.** This program is conducted by the **Jubilee Mission Institute of Physiotherapy**. Students delve into movement science and therapeutic techniques, gaining expert knowledge in musculoskeletal, neurological, and cardio-respiratory rehabilitation.
+                        <strong>Restoring Movement and Quality of Life.</strong> This program is conducted by the <strong>Jubilee Mission Institute of Physiotherapy</strong>. Students delve into movement science and therapeutic techniques, gaining expert knowledge in musculoskeletal, neurological, and cardio-respiratory rehabilitation.
                     </p>
                     
                     <p class="text-sm font-semibold text-gray-800 mb-4">Program Details:</p>
-                    <ul class="text-sm text-gray-600 list-disc list-inside space-y-1 ml-4">
+                    <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1 mb-6">
                         <li>Bachelor of Physiotherapy (4.5 Years including internship)</li>
                         <li>Focus on Orthopedic, Neuro, and Sports rehab</li>
                         <li>Extensive clinical practice required</li>
                     </ul>
                     
-                    <a href="contact_us.html" class="inline-block bg-secondary hover:bg-gray-800 text-white font-semibold py-2 px-5 rounded-lg mt-6 transition duration-300">
+                    <a href="contact_us.html" class="self-start mt-auto inline-block bg-secondary hover:bg-gray-800 text-white font-semibold py-2 px-5 rounded-lg transition duration-300">
                         View Detailed Curriculum <i class="fas fa-arrow-right ml-2 text-sm"></i>
                     </a>
                 </div>
 
                 <!-- Course Card 3: B.Sc. Allied Health Sciences -->
-                <div class="bg-white rounded-xl shadow-2xl p-6 border-t-8 border-primary transform hover:scale-[1.02] transition duration-300">
+                <div class="bg-white rounded-xl shadow-2xl p-6 border-t-8 border-primary transform hover:scale-[1.02] transition duration-300 flex flex-col">
                     <div class="flex items-start mb-6">
                         <div class="course-icon">
                             <i class="fas fa-microscope text-2xl"></i>
                         </div>
                         <!-- Highlight the Course -->
-                        <h3 class="text-3xl font-bold text-secondary ml-4 pt-1">B.Sc. Allied Health Sciences</h3>
+                        <h3 class="text-2xl font-bold text-secondary ml-4 pt-1 leading-tight">B.Sc. Allied Health Sciences</h3>
                     </div>
                     
                     <img 
-                        src="ahs_institute_building.jpg" 
+                        src="nursing_programs.png" loading="lazy" 
                         alt="Jubilee Mission Institute of Allied Health Sciences" 
                         class="w-full h-48 object-cover rounded-lg mb-4"
                         onerror="this.onerror=null; this.src='https://placehold.co/400x192/330033/ffffff?text=Jubilee+Mission+Institute+of+AHS';"
                     >
                     
                     <p class="text-gray-700 mb-6 text-base">
-                        **Diagnostics and Technical Support.** These specialized programs are run by the **Jubilee Mission Institute of Allied Health Sciences**. They train students for technical roles crucial to modern diagnostics and patient management, emphasizing precision and technical competence.
+                        <strong>Diagnostics and Technical Support.</strong> These specialized programs are run by the <strong>Jubilee Mission Institute of Allied Health Sciences</strong>. They train students for technical roles crucial to modern diagnostics and patient management, emphasizing precision and technical competence.
                     </p>
                     
                     <p class="text-sm font-semibold text-gray-800 mb-4">Specializations (B.Sc. 3 Years):</p>
-                    <ul class="text-sm text-gray-600 list-disc list-inside space-y-1 ml-4">
+                    <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1 mb-6">
                         <li>B.Sc. Medical Laboratory Technology (MLT)</li>
                         <li>B.Sc. Medical Imaging Technology (MIT)</li>
                         <li>B.Sc. Anaesthesia Technology / Operation Theatre (AT/OT)</li>
                     </ul>
                     
-                    <a href="contact_us.html" class="inline-block bg-secondary hover:bg-gray-800 text-white font-semibold py-2 px-5 rounded-lg mt-6 transition duration-300">
+                    <a href="contact_us.html" class="self-start mt-auto inline-block bg-secondary hover:bg-gray-800 text-white font-semibold py-2 px-5 rounded-lg transition duration-300">
                         View Detailed Curriculum <i class="fas fa-arrow-right ml-2 text-sm"></i>
                     </a>
                 </div>
@@ -266,58 +256,39 @@
 
 </main>
 
-<!-- Footer -->
 <footer class="bg-footer text-white py-10">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-            
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="space-y-4">
-                <!-- FIXED: Logo link to index.html -->
-                <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
-                    <img 
-                        src="logo.png" 
-                        alt="Jubilee Mission College Logo" 
-                        class="w-40 h-18 object-contain rounded-full"
-                        onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
-                    >
+                <a href="index.html" class="inline-block">
+                    <img src="logo.png" alt="Jubilee Mission Group of Institutions" class="h-16 w-auto object-contain">
                 </a>
                 <p class="text-sm text-gray-400">
                     Join Jubilee Mission Group of Institutions in Bangalore for quality healthcare education in BPT, Nursing, and Allied Health Sciences. Our programs combine hands-on training with a strong foundation in compassion, competence, and ethics—preparing you for a meaningful career across diverse healthcare fields. Discover your future with us.
                 </p>
                 <div class="flex space-x-4 pt-2">
-                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-facebook-f text-white"></i></a>
-                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-twitter text-white"></i></a>
-                    <!-- FIXED: Instagram URL -->
-                    <a href="https://www.instagram.com/jubilee_mission_group/" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-instagram text-white"></i></a>
-                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-youtube text-white"></i></a>
+                    <a href="https://www.instagram.com/jubilee_mission_group/" target="_blank" rel="noopener" aria-label="Instagram" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-instagram text-white"></i></a>
                 </div>
             </div>
 
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
                 <ul class="space-y-2 text-sm">
-                    <!-- FIXED: All links and names -->
-                    <li><a href="contact_us.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ADMISSION</a></li>
-                    <li><a href="courses.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
-                    <li><a href="contact_us.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
-                    <li><a href="about_institution.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
-                    <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
-                    <li><a href="gallery.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> GALLERY</a></li>
+                    <li><a href="courses.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
+                    <li><a href="contact_us.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ADMISSIONS &amp; CONTACT</a></li>
+                    <li><a href="about_institution.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
+                    <li><a href="gallery.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> GALLERY</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">QUICK LINKS</h3>
                 <ul class="space-y-2 text-sm">
-                    <!-- Keeping custom links with # for now, fixing core links -->
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> PLACEMENTS</a></li>
-                    <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
-                    <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
-                    <!-- FIXED: Hospital link -->
-                    <li><a href="hospitals.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITAL</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> INTERNSHIP</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> SOFT SKILLS LAB</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> TEACHING FACULTY</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
+                    <li><a href="https://samuelduraivel.github.io/livestream/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIVE CLASS</a></li>
+                    <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> PRIVACY POLICY</a></li>
                 </ul>
             </div>
 
@@ -325,46 +296,36 @@
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">CONTACT US</h3>
                 <div class="space-y-4 text-sm text-gray-400">
                     <div class="flex items-start">
-                        <i class="fas fa-map-marker-alt text-primary mt-1 mr-3 flex-shrink-0"></i>
+                        <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-3 flex-shrink-0"></i>
                         <p>#81, 3rd Cross, Near Fortis Hospital, Nagarbhavi, Bangalore - 560072</p>
                     </div>
                     <div class="flex items-center">
-                        <i class="fas fa-phone text-primary mr-3"></i>
-                        <p>+91 9998643333</p>
+                        <i class="fas fa-phone text-red-500 mr-3"></i>
+                        <a href="tel:+919998643333" class="hover:text-white">+91 9998643333</a>
                     </div>
                     <div class="flex items-center">
-                        <i class="fas fa-envelope text-primary mr-3"></i>
-                        <!-- FIXED: Email address -->
-                        <p>jubileem123@gmail.com</p>
+                        <i class="fas fa-envelope text-red-500 mr-3"></i>
+                        <a href="mailto:jubileem123@gmail.com" class="hover:text-white break-all">jubileem123@gmail.com</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
-            <!-- FIXED: Copyright year and removed legal/TOS links -->
-            <p>&copy; Copyright Jubilee 2025. All rights reserved. 
-                <span class="ml-4 pl-4 border-l border-gray-700">Developed by Neocx Innovative Educations Private Limited</span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="privacy.html" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
-            </p>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-300 flex flex-col md:flex-row md:justify-center items-center gap-2 md:gap-0 md:divide-x md:divide-gray-700 text-center">
+            <p class="md:px-4">&copy; Copyright Jubilee 2025. All rights reserved.</p>
+            <p class="md:px-4">Developed by Neocx Innovative Educations Private Limited</p>
+            <p class="md:px-4"><a href="privacy.html" class="hover:text-white transition duration-200">Privacy Policy</a></p>
         </div>
     </div>
 </footer>
 
 <script>
-    // JavaScript for mobile menu toggling
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
         const menu = document.getElementById('mobile-menu');
-        // Toggle max-h classes for smooth transition
-        if (menu.classList.contains('max-h-0')) {
-            menu.classList.remove('max-h-0');
-            menu.classList.add('max-h-screen');
-        } else {
-            menu.classList.remove('max-h-screen');
-            menu.classList.add('max-h-0');
-        }
+        const open = menu.classList.toggle('max-h-screen');
+        menu.classList.toggle('max-h-0', !open);
+        this.setAttribute('aria-expanded', open);
     });
 </script>
-
 </body>
 </html>

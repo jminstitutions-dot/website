@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jubilee Mission Group of Institutions - Gallery</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="site.css">
     <style>
         :root {
             --color-primary: #990000;
@@ -64,405 +67,417 @@
 <header class="bg-primary text-white text-sm hidden lg:block">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
         <div class="flex space-x-6">
-            <span class="flex items-center"><i class="fas fa-phone mr-2"></i> +91 9986433333</span>
-            <span class="flex items-center"><i class="fas fa-envelope mr-2"></i> jubileem123@gmail.com</span>
+            <a href="tel:+919986433333" class="flex items-center hover:text-gray-200"><i class="fas fa-phone mr-2"></i> +91 9986433333</a>
+            <a href="mailto:jubileem123@gmail.com" class="flex items-center hover:text-gray-200"><i class="fas fa-envelope mr-2"></i> jubileem123@gmail.com</a>
             <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Bangalore - 560072</span>
         </div>
         <div class="flex space-x-4">
-            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/jubilee_mission_group/" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="hover:text-gray-300 transition duration-300"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/jubilee_mission_group/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-gray-300 transition duration-300"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
 </header>
 
-<nav class="bg-secondary shadow-lg">
+<nav class="bg-secondary shadow-lg relative z-40">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center h-24">
-            <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
-                <img 
-                    src="logo.png" 
-                    alt="Jubilee Mission College Logo" 
-                    class="w-40 h-18 object-contain rounded-full" 
-                    onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
-                >
+        <div class="flex justify-between items-center h-20 lg:h-24 gap-4">
+            <a href="index.html" class="flex items-center flex-shrink-0">
+                <img src="logo.png" alt="Jubilee Mission Group of Institutions" class="h-14 lg:h-16 w-auto object-contain">
             </a>
 
-            <div class="hidden lg:flex items-center space-x-6 text-white">
-                <a href="index.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Home</a>
-                <a href="about_institution.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">About Institution</a>
-                <a href="courses.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Courses</a>
-                <a href="campus.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Campus</a>
-                <a href="gallery.html" class="py-5 px-3 nav-active transition duration-300 font-bold">Gallery</a>
-                <a href="contact_us.html" class="py-5 px-3 hover:text-primary transition duration-300 font-medium">Contact Us</a>
+            <div class="hidden lg:flex items-center gap-1 xl:gap-2 text-white text-sm xl:text-base whitespace-nowrap">
+                <a href="index.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Home</a>
+                <a href="about_institution.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">About Institution</a>
+                <a href="courses.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Courses</a>
+                <a href="campus.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Campus</a>
+                <a href="gallery.html" aria-current="page" class="py-2 px-3 rounded-md bg-white text-primary font-bold shadow">Gallery</a>
+                <a href="contact_us.html" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Contact Us</a>
+                <a href="https://samuelduraivel.github.io/livestream/" target="_blank" rel="noopener" class="py-2 px-3 rounded-md font-medium hover:bg-white/10 hover:text-white transition duration-300">Live Class</a>
             </div>
 
-            <a href="contact_us.html" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300 shadow-md transform hover:scale-105 hidden lg:block">
+            <a href="contact_us.html" class="bg-primary hover:bg-red-700 text-white font-bold py-2 px-4 xl:px-6 rounded-lg transition duration-300 shadow-md hidden lg:block whitespace-nowrap text-sm xl:text-base">
                 ADMISSION OPEN
             </a>
 
-            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none p-2" aria-label="Open menu" aria-controls="mobile-menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
     </div>
 
     <div id="mobile-menu" class="lg:hidden bg-secondary transition-all duration-300 max-h-0 overflow-hidden">
-        <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Home</a>
-        <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">About Institution</a>
-        <a href="courses.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Courses</a>
-        <a href="campus.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Campus</a>
-        <a href="gallery.html" class="block py-3 px-4 text-sm text-primary bg-white/10 transition duration-200 font-bold">Gallery</a>
-        <a href="contact_us.html" class="block py-3 px-4 text-sm text-white hover:bg-gray-700 transition duration-200">Contact Us</a>
+        <a href="index.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Home</a>
+        <a href="about_institution.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">About Institution</a>
+        <a href="courses.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Courses</a>
+        <a href="campus.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Campus</a>
+        <a href="gallery.html" aria-current="page" class="block py-3 px-4 text-sm bg-white text-primary font-bold">Gallery</a>
+        <a href="contact_us.html" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Contact Us</a>
+        <a href="https://samuelduraivel.github.io/livestream/" target="_blank" rel="noopener" class="block py-3 px-4 text-sm text-white hover:bg-white/10 transition duration-200">Live Class</a>
         <a href="contact_us.html" class="block bg-primary text-center text-white py-4 font-bold hover:bg-red-700 transition duration-200">ADMISSION OPEN</a>
     </div>
 </nav>
 <main>
     <section class="bg-gray-100 py-16">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-5xl font-extrabold text-secondary mb-3">Our Campus & Events Gallery</h1>
-            <p class="text-xl text-gray-600">A visual journey through academic excellence, campus life, and vibrant student activities.</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-secondary mb-3">Our Campus & Events Gallery</h1>
+            <p class="text-lg md:text-xl text-gray-600">A visual journey through academic excellence, campus life, and vibrant student activities.</p>
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-white">
+    <section class="pt-12 md:pt-16 bg-white">
         <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-secondary text-center mb-8">Videos</h2>
+            <div class="mx-auto w-full max-w-xs sm:max-w-sm rounded-xl shadow-2xl overflow-hidden border-t-8 border-primary bg-black" style="aspect-ratio: 9 / 16;">
+                <iframe
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/UeTsLL7j6Og"
+                    title="Jubilee Mission Group of Institutions video"
+                    loading="lazy"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-secondary text-center mb-8">Photos</h2>
             <div id="image-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1fbyOsHJjMfsNRKm45eIopXCW5VGyP9BJ', 'Gallery Image 1')">
-                    <img src="https://lh3.googleusercontent.com/d/1fbyOsHJjMfsNRKm45eIopXCW5VGyP9BJ" alt="Gallery Image 1" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1fbyOsHJjMfsNRKm45eIopXCW5VGyP9BJ=s1600', 'Gallery Image 1')">
+                    <img src="https://lh3.googleusercontent.com/d/1fbyOsHJjMfsNRKm45eIopXCW5VGyP9BJ=s600" loading="lazy" decoding="async" alt="Gallery Image 1" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1irOwcxsG_Go-77iIq8XGY7qtHgTVvqIX', 'Gallery Image 2')">
-                    <img src="https://lh3.googleusercontent.com/d/1irOwcxsG_Go-77iIq8XGY7qtHgTVvqIX" alt="Gallery Image 2" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1irOwcxsG_Go-77iIq8XGY7qtHgTVvqIX=s1600', 'Gallery Image 2')">
+                    <img src="https://lh3.googleusercontent.com/d/1irOwcxsG_Go-77iIq8XGY7qtHgTVvqIX=s600" loading="lazy" decoding="async" alt="Gallery Image 2" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1diiwyBr3QFHyh8Z2DGb40YtX84f-z9Ce', 'Gallery Image 3')">
-                    <img src="https://lh3.googleusercontent.com/d/1diiwyBr3QFHyh8Z2DGb40YtX84f-z9Ce" alt="Gallery Image 3" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1diiwyBr3QFHyh8Z2DGb40YtX84f-z9Ce=s1600', 'Gallery Image 3')">
+                    <img src="https://lh3.googleusercontent.com/d/1diiwyBr3QFHyh8Z2DGb40YtX84f-z9Ce=s600" loading="lazy" decoding="async" alt="Gallery Image 3" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1CBmPqIdOe2JUWFexPh6wqh0EKtQNgezS', 'Gallery Image 4')">
-                    <img src="https://lh3.googleusercontent.com/d/1CBmPqIdOe2JUWFexPh6wqh0EKtQNgezS" alt="Gallery Image 4" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1CBmPqIdOe2JUWFexPh6wqh0EKtQNgezS=s1600', 'Gallery Image 4')">
+                    <img src="https://lh3.googleusercontent.com/d/1CBmPqIdOe2JUWFexPh6wqh0EKtQNgezS=s600" loading="lazy" decoding="async" alt="Gallery Image 4" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1rouOEHYcQQ20Do1L06ERXdTGTlODHEiL', 'Gallery Image 5')">
-                    <img src="https://lh3.googleusercontent.com/d/1rouOEHYcQQ20Do1L06ERXdTGTlODHEiL" alt="Gallery Image 5" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1rouOEHYcQQ20Do1L06ERXdTGTlODHEiL=s1600', 'Gallery Image 5')">
+                    <img src="https://lh3.googleusercontent.com/d/1rouOEHYcQQ20Do1L06ERXdTGTlODHEiL=s600" loading="lazy" decoding="async" alt="Gallery Image 5" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1NHKjkgVZtgIlden8VtJwuIQtUFLfMJ8H', 'Gallery Image 6')">
-                    <img src="https://lh3.googleusercontent.com/d/1NHKjkgVZtgIlden8VtJwuIQtUFLfMJ8H" alt="Gallery Image 6" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1NHKjkgVZtgIlden8VtJwuIQtUFLfMJ8H=s1600', 'Gallery Image 6')">
+                    <img src="https://lh3.googleusercontent.com/d/1NHKjkgVZtgIlden8VtJwuIQtUFLfMJ8H=s600" loading="lazy" decoding="async" alt="Gallery Image 6" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1RYX6YIB6Wh8ifZw9f9dPYRjiktbH4Bql', 'Gallery Image 7')">
-                    <img src="https://lh3.googleusercontent.com/d/1RYX6YIB6Wh8ifZw9f9dPYRjiktbH4Bql" alt="Gallery Image 7" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1RYX6YIB6Wh8ifZw9f9dPYRjiktbH4Bql=s1600', 'Gallery Image 7')">
+                    <img src="https://lh3.googleusercontent.com/d/1RYX6YIB6Wh8ifZw9f9dPYRjiktbH4Bql=s600" loading="lazy" decoding="async" alt="Gallery Image 7" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1kmn71liL5z9W1ReOIjz_F8C48vFsiya_', 'Gallery Image 8')">
-                    <img src="https://lh3.googleusercontent.com/d/1kmn71liL5z9W1ReOIjz_F8C48vFsiya_" alt="Gallery Image 8" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1kmn71liL5z9W1ReOIjz_F8C48vFsiya_=s1600', 'Gallery Image 8')">
+                    <img src="https://lh3.googleusercontent.com/d/1kmn71liL5z9W1ReOIjz_F8C48vFsiya_=s600" loading="lazy" decoding="async" alt="Gallery Image 8" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1mmQZcvE9Qi7cIHKzf54nZTcDJJXpLiyG', 'Gallery Image 9')">
-                    <img src="https://lh3.googleusercontent.com/d/1mmQZcvE9Qi7cIHKzf54nZTcDJJXpLiyG" alt="Gallery Image 9" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1mmQZcvE9Qi7cIHKzf54nZTcDJJXpLiyG=s1600', 'Gallery Image 9')">
+                    <img src="https://lh3.googleusercontent.com/d/1mmQZcvE9Qi7cIHKzf54nZTcDJJXpLiyG=s600" loading="lazy" decoding="async" alt="Gallery Image 9" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1tPmPg-JH5bS7l01ibqmadgdTgsyq5vFO', 'Gallery Image 10')">
-                    <img src="https://lh3.googleusercontent.com/d/1tPmPg-JH5bS7l01ibqmadgdTgsyq5vFO" alt="Gallery Image 10" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1tPmPg-JH5bS7l01ibqmadgdTgsyq5vFO=s1600', 'Gallery Image 10')">
+                    <img src="https://lh3.googleusercontent.com/d/1tPmPg-JH5bS7l01ibqmadgdTgsyq5vFO=s600" loading="lazy" decoding="async" alt="Gallery Image 10" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1JmKbG8ispAnje0CzF5HQBQZeM3yVhzOy', 'Gallery Image 11')">
-                    <img src="https://lh3.googleusercontent.com/d/1JmKbG8ispAnje0CzF5HQBQZeM3yVhzOy" alt="Gallery Image 11" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1JmKbG8ispAnje0CzF5HQBQZeM3yVhzOy=s1600', 'Gallery Image 11')">
+                    <img src="https://lh3.googleusercontent.com/d/1JmKbG8ispAnje0CzF5HQBQZeM3yVhzOy=s600" loading="lazy" decoding="async" alt="Gallery Image 11" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1N3wEJTs7T15RHfbtC42e0Day8Q6igNVc', 'Gallery Image 12')">
-                    <img src="https://lh3.googleusercontent.com/d/1N3wEJTs7T15RHfbtC42e0Day8Q6igNVc" alt="Gallery Image 12" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1N3wEJTs7T15RHfbtC42e0Day8Q6igNVc=s1600', 'Gallery Image 12')">
+                    <img src="https://lh3.googleusercontent.com/d/1N3wEJTs7T15RHfbtC42e0Day8Q6igNVc=s600" loading="lazy" decoding="async" alt="Gallery Image 12" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1E6DOI15B0ODMgON-zTDPY1KSg6N2B-I3', 'Gallery Image 13')">
-                    <img src="https://lh3.googleusercontent.com/d/1E6DOI15B0ODMgON-zTDPY1KSg6N2B-I3" alt="Gallery Image 13" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1E6DOI15B0ODMgON-zTDPY1KSg6N2B-I3=s1600', 'Gallery Image 13')">
+                    <img src="https://lh3.googleusercontent.com/d/1E6DOI15B0ODMgON-zTDPY1KSg6N2B-I3=s600" loading="lazy" decoding="async" alt="Gallery Image 13" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1h2n55izbqkQ-Ls3eNV7KDjIjSuZqEbMX', 'Gallery Image 14')">
-                    <img src="https://lh3.googleusercontent.com/d/1h2n55izbqkQ-Ls3eNV7KDjIjSuZqEbMX" alt="Gallery Image 14" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1h2n55izbqkQ-Ls3eNV7KDjIjSuZqEbMX=s1600', 'Gallery Image 14')">
+                    <img src="https://lh3.googleusercontent.com/d/1h2n55izbqkQ-Ls3eNV7KDjIjSuZqEbMX=s600" loading="lazy" decoding="async" alt="Gallery Image 14" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/18u09ZtqSMXMtmF0CU5O0KHREq-vf99YL', 'Gallery Image 15')">
-                    <img src="https://lh3.googleusercontent.com/d/18u09ZtqSMXMtmF0CU5O0KHREq-vf99YL" alt="Gallery Image 15" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/18u09ZtqSMXMtmF0CU5O0KHREq-vf99YL=s1600', 'Gallery Image 15')">
+                    <img src="https://lh3.googleusercontent.com/d/18u09ZtqSMXMtmF0CU5O0KHREq-vf99YL=s600" loading="lazy" decoding="async" alt="Gallery Image 15" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1urVFTtA579tGaXhn42wMIAgCp3LOYfM2', 'Gallery Image 16')">
-                    <img src="https://lh3.googleusercontent.com/d/1urVFTtA579tGaXhn42wMIAgCp3LOYfM2" alt="Gallery Image 16" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1urVFTtA579tGaXhn42wMIAgCp3LOYfM2=s1600', 'Gallery Image 16')">
+                    <img src="https://lh3.googleusercontent.com/d/1urVFTtA579tGaXhn42wMIAgCp3LOYfM2=s600" loading="lazy" decoding="async" alt="Gallery Image 16" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1i1Ew4xIBp6x2ducgx_PPQdw_CJFI6F5_', 'Gallery Image 17')">
-                    <img src="https://lh3.googleusercontent.com/d/1i1Ew4xIBp6x2ducgx_PPQdw_CJFI6F5_" alt="Gallery Image 17" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1i1Ew4xIBp6x2ducgx_PPQdw_CJFI6F5_=s1600', 'Gallery Image 17')">
+                    <img src="https://lh3.googleusercontent.com/d/1i1Ew4xIBp6x2ducgx_PPQdw_CJFI6F5_=s600" loading="lazy" decoding="async" alt="Gallery Image 17" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/14I9puoaK0KhOj3r29Y6cVESe09zpMEOc', 'Gallery Image 18')">
-                    <img src="https://lh3.googleusercontent.com/d/14I9puoaK0KhOj3r29Y6cVESe09zpMEOc" alt="Gallery Image 18" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/14I9puoaK0KhOj3r29Y6cVESe09zpMEOc=s1600', 'Gallery Image 18')">
+                    <img src="https://lh3.googleusercontent.com/d/14I9puoaK0KhOj3r29Y6cVESe09zpMEOc=s600" loading="lazy" decoding="async" alt="Gallery Image 18" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1G27HafC54W3QvwgrO2P7LmifuY6Dqt1L', 'Gallery Image 19')">
-                    <img src="https://lh3.googleusercontent.com/d/1G27HafC54W3QvwgrO2P7LmifuY6Dqt1L" alt="Gallery Image 19" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1G27HafC54W3QvwgrO2P7LmifuY6Dqt1L=s1600', 'Gallery Image 19')">
+                    <img src="https://lh3.googleusercontent.com/d/1G27HafC54W3QvwgrO2P7LmifuY6Dqt1L=s600" loading="lazy" decoding="async" alt="Gallery Image 19" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1BZsFhA0pCEAF8AhFMTq7a2WiSirBiejh', 'Gallery Image 20')">
-                    <img src="https://lh3.googleusercontent.com/d/1BZsFhA0pCEAF8AhFMTq7a2WiSirBiejh" alt="Gallery Image 20" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1BZsFhA0pCEAF8AhFMTq7a2WiSirBiejh=s1600', 'Gallery Image 20')">
+                    <img src="https://lh3.googleusercontent.com/d/1BZsFhA0pCEAF8AhFMTq7a2WiSirBiejh=s600" loading="lazy" decoding="async" alt="Gallery Image 20" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1PYw9XQyCvi8BMq3TCBEGpwIDZtudvo5S', 'Gallery Image 21')">
-                    <img src="https://lh3.googleusercontent.com/d/1PYw9XQyCvi8BMq3TCBEGpwIDZtudvo5S" alt="Gallery Image 21" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1PYw9XQyCvi8BMq3TCBEGpwIDZtudvo5S=s1600', 'Gallery Image 21')">
+                    <img src="https://lh3.googleusercontent.com/d/1PYw9XQyCvi8BMq3TCBEGpwIDZtudvo5S=s600" loading="lazy" decoding="async" alt="Gallery Image 21" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1-qbuj51gkXEpjLuB7ZJMbkcRwUB55mr5', 'Gallery Image 22')">
-                    <img src="https://lh3.googleusercontent.com/d/1-qbuj51gkXEpjLuB7ZJMbkcRwUB55mr5" alt="Gallery Image 22" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1-qbuj51gkXEpjLuB7ZJMbkcRwUB55mr5=s1600', 'Gallery Image 22')">
+                    <img src="https://lh3.googleusercontent.com/d/1-qbuj51gkXEpjLuB7ZJMbkcRwUB55mr5=s600" loading="lazy" decoding="async" alt="Gallery Image 22" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1gmI3nx8p8wf3nvXu7jvUwM4bQkqLNkfL', 'Gallery Image 23')">
-                    <img src="https://lh3.googleusercontent.com/d/1gmI3nx8p8wf3nvXu7jvUwM4bQkqLNkfL" alt="Gallery Image 23" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1gmI3nx8p8wf3nvXu7jvUwM4bQkqLNkfL=s1600', 'Gallery Image 23')">
+                    <img src="https://lh3.googleusercontent.com/d/1gmI3nx8p8wf3nvXu7jvUwM4bQkqLNkfL=s600" loading="lazy" decoding="async" alt="Gallery Image 23" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/11XJXCdmdgalPDSAPKPbzox0fzp3_AkBQ', 'Gallery Image 24')">
-                    <img src="https://lh3.googleusercontent.com/d/11XJXCdmdgalPDSAPKPbzox0fzp3_AkBQ" alt="Gallery Image 24" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/11XJXCdmdgalPDSAPKPbzox0fzp3_AkBQ=s1600', 'Gallery Image 24')">
+                    <img src="https://lh3.googleusercontent.com/d/11XJXCdmdgalPDSAPKPbzox0fzp3_AkBQ=s600" loading="lazy" decoding="async" alt="Gallery Image 24" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/10KF7pHGL0kbQFZWCQNv5ezHaRfH1BN8F', 'Gallery Image 25')">
-                    <img src="https://lh3.googleusercontent.com/d/10KF7pHGL0kbQFZWCQNv5ezHaRfH1BN8F" alt="Gallery Image 25" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/10KF7pHGL0kbQFZWCQNv5ezHaRfH1BN8F=s1600', 'Gallery Image 25')">
+                    <img src="https://lh3.googleusercontent.com/d/10KF7pHGL0kbQFZWCQNv5ezHaRfH1BN8F=s600" loading="lazy" decoding="async" alt="Gallery Image 25" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1z2a-wOtqjNsZSbcbUyi5W5Er2qS7Ks4o', 'Gallery Image 26')">
-                    <img src="https://lh3.googleusercontent.com/d/1z2a-wOtqjNsZSbcbUyi5W5Er2qS7Ks4o" alt="Gallery Image 26" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1z2a-wOtqjNsZSbcbUyi5W5Er2qS7Ks4o=s1600', 'Gallery Image 26')">
+                    <img src="https://lh3.googleusercontent.com/d/1z2a-wOtqjNsZSbcbUyi5W5Er2qS7Ks4o=s600" loading="lazy" decoding="async" alt="Gallery Image 26" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1SvNVZtkuMIkaY2TWZgF7erhQt5DB7fqW', 'Gallery Image 27')">
-                    <img src="https://lh3.googleusercontent.com/d/1SvNVZtkuMIkaY2TWZgF7erhQt5DB7fqW" alt="Gallery Image 27" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1SvNVZtkuMIkaY2TWZgF7erhQt5DB7fqW=s1600', 'Gallery Image 27')">
+                    <img src="https://lh3.googleusercontent.com/d/1SvNVZtkuMIkaY2TWZgF7erhQt5DB7fqW=s600" loading="lazy" decoding="async" alt="Gallery Image 27" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1q1BoTB6Hl8tpYCCe37JCuLHAMGgT4z8b', 'Gallery Image 28')">
-                    <img src="https://lh3.googleusercontent.com/d/1q1BoTB6Hl8tpYCCe37JCuLHAMGgT4z8b" alt="Gallery Image 28" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-                
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1_oNCn6zqgmpoXfv13QheJc1GyGbGRStF', 'Gallery Image 29')">
-                    <img src="https://lh3.googleusercontent.com/d/1_oNCn6zqgmpoXfv13QheJc1GyGbGRStF" alt="Gallery Image 29" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1VlGpB0oNbTtgAHZoQQee0Dqfaaw5G_2Q', 'Gallery Image 30')">
-                    <img src="https://lh3.googleusercontent.com/d/1VlGpB0oNbTtgAHZoQQee0Dqfaaw5G_2Q" alt="Gallery Image 30" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1iVMqAHdzPELxW6nkivBlU9MXiM_fAyDB', 'Gallery Image 31')">
-                    <img src="https://lh3.googleusercontent.com/d/1iVMqAHdzPELxW6nkivBlU9MXiM_fAyDB" alt="Gallery Image 31" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1htLvPFFgoGbAGpBAYVfvArG9w-Wx3reu', 'Gallery Image 32')">
-                    <img src="https://lh3.googleusercontent.com/d/1htLvPFFgoGbAGpBAYVfvArG9w-Wx3reu" alt="Gallery Image 32" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/173MFpv8ZYKe0geSgGIU4MmnpPEjkWVxh', 'Gallery Image 33')">
-                    <img src="https://lh3.googleusercontent.com/d/173MFpv8ZYKe0geSgGIU4MmnpPEjkWVxh" alt="Gallery Image 33" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/12El8Z1r5yFlKyTDuzjcjXzjejOF59Y3B', 'Gallery Image 34')">
-                    <img src="https://lh3.googleusercontent.com/d/12El8Z1r5yFlKyTDuzjcjXzjejOF59Y3B" alt="Gallery Image 34" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1RgztvqlMGAREP6h2iWsO5mxJwh8g7h-a', 'Gallery Image 35')">
-                    <img src="https://lh3.googleusercontent.com/d/1RgztvqlMGAREP6h2iWsO5mxJwh8g7h-a" alt="Gallery Image 35" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1aOENeR4cdsUq9xzTcOclAC3CkZp5Loud', 'Gallery Image 36')">
-                    <img src="https://lh3.googleusercontent.com/d/1aOENeR4cdsUq9xzTcOclAC3CkZp5Loud" alt="Gallery Image 36" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/11qjGQw1nJVNPCVXHIkyhDE8TUu9Jfa1O', 'Gallery Image 37')">
-                    <img src="https://lh3.googleusercontent.com/d/11qjGQw1nJVNPCVXHIkyhDE8TUu9Jfa1O" alt="Gallery Image 37" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1vsXt2GSL9taoSdYr4yfyNf8MOGSuIY_z', 'Gallery Image 38')">
-                    <img src="https://lh3.googleusercontent.com/d/1vsXt2GSL9taoSdYr4yfyNf8MOGSuIY_z" alt="Gallery Image 38" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1Jv-bsI4f4n1sQPQwZZtuuK4eyFC0lrDo', 'Gallery Image 39')">
-                    <img src="https://lh3.googleusercontent.com/d/1Jv-bsI4f4n1sQPQwZZtuuK4eyFC0lrDo" alt="Gallery Image 39" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
-                </div>
-
-                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1MJsbWf1uIh7VVp3rOstmpQTnKLudeWkc', 'Gallery Image 40')">
-                    <img src="https://lh3.googleusercontent.com/d/1MJsbWf1uIh7VVp3rOstmpQTnKLudeWkc" alt="Gallery Image 40" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1q1BoTB6Hl8tpYCCe37JCuLHAMGgT4z8b=s1600', 'Gallery Image 28')">
+                    <img src="https://lh3.googleusercontent.com/d/1q1BoTB6Hl8tpYCCe37JCuLHAMGgT4z8b=s600" loading="lazy" decoding="async" alt="Gallery Image 28" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1tQ5Cp5BwzPEXrGdkcYJ8nG5ByFAQXkJW', 'Gallery Image 41')">
-                    <img src="https://lh3.googleusercontent.com/d/1tQ5Cp5BwzPEXrGdkcYJ8nG5ByFAQXkJW" alt="Gallery Image 41" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1_oNCn6zqgmpoXfv13QheJc1GyGbGRStF=s1600', 'Gallery Image 29')">
+                    <img src="https://lh3.googleusercontent.com/d/1_oNCn6zqgmpoXfv13QheJc1GyGbGRStF=s600" loading="lazy" decoding="async" alt="Gallery Image 29" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/125ebJ89gHdC2sUesSUhKSspYTmrqyDVw', 'Gallery Image 42')">
-                    <img src="https://lh3.googleusercontent.com/d/125ebJ89gHdC2sUesSUhKSspYTmrqyDVw" alt="Gallery Image 42" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1VlGpB0oNbTtgAHZoQQee0Dqfaaw5G_2Q=s1600', 'Gallery Image 30')">
+                    <img src="https://lh3.googleusercontent.com/d/1VlGpB0oNbTtgAHZoQQee0Dqfaaw5G_2Q=s600" loading="lazy" decoding="async" alt="Gallery Image 30" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/19WYYK5CUuiQ8lrR75JoFXscE1JWxuegZ', 'Gallery Image 43')">
-                    <img src="https://lh3.googleusercontent.com/d/19WYYK5CUuiQ8lrR75JoFXscE1JWxuegZ" alt="Gallery Image 43" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1iVMqAHdzPELxW6nkivBlU9MXiM_fAyDB=s1600', 'Gallery Image 31')">
+                    <img src="https://lh3.googleusercontent.com/d/1iVMqAHdzPELxW6nkivBlU9MXiM_fAyDB=s600" loading="lazy" decoding="async" alt="Gallery Image 31" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1yQUgHiCFfmCNS5IPdl9k1TVlJZPFyuLl', 'Gallery Image 44')">
-                    <img src="https://lh3.googleusercontent.com/d/1yQUgHiCFfmCNS5IPdl9k1TVlJZPFyuLl" alt="Gallery Image 44" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1htLvPFFgoGbAGpBAYVfvArG9w-Wx3reu=s1600', 'Gallery Image 32')">
+                    <img src="https://lh3.googleusercontent.com/d/1htLvPFFgoGbAGpBAYVfvArG9w-Wx3reu=s600" loading="lazy" decoding="async" alt="Gallery Image 32" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/173MFpv8ZYKe0geSgGIU4MmnpPEjkWVxh=s1600', 'Gallery Image 33')">
+                    <img src="https://lh3.googleusercontent.com/d/173MFpv8ZYKe0geSgGIU4MmnpPEjkWVxh=s600" loading="lazy" decoding="async" alt="Gallery Image 33" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/12El8Z1r5yFlKyTDuzjcjXzjejOF59Y3B=s1600', 'Gallery Image 34')">
+                    <img src="https://lh3.googleusercontent.com/d/12El8Z1r5yFlKyTDuzjcjXzjejOF59Y3B=s600" loading="lazy" decoding="async" alt="Gallery Image 34" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1RgztvqlMGAREP6h2iWsO5mxJwh8g7h-a=s1600', 'Gallery Image 35')">
+                    <img src="https://lh3.googleusercontent.com/d/1RgztvqlMGAREP6h2iWsO5mxJwh8g7h-a=s600" loading="lazy" decoding="async" alt="Gallery Image 35" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1aOENeR4cdsUq9xzTcOclAC3CkZp5Loud=s1600', 'Gallery Image 36')">
+                    <img src="https://lh3.googleusercontent.com/d/1aOENeR4cdsUq9xzTcOclAC3CkZp5Loud=s600" loading="lazy" decoding="async" alt="Gallery Image 36" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/11qjGQw1nJVNPCVXHIkyhDE8TUu9Jfa1O=s1600', 'Gallery Image 37')">
+                    <img src="https://lh3.googleusercontent.com/d/11qjGQw1nJVNPCVXHIkyhDE8TUu9Jfa1O=s600" loading="lazy" decoding="async" alt="Gallery Image 37" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1vsXt2GSL9taoSdYr4yfyNf8MOGSuIY_z=s1600', 'Gallery Image 38')">
+                    <img src="https://lh3.googleusercontent.com/d/1vsXt2GSL9taoSdYr4yfyNf8MOGSuIY_z=s600" loading="lazy" decoding="async" alt="Gallery Image 38" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1Jv-bsI4f4n1sQPQwZZtuuK4eyFC0lrDo=s1600', 'Gallery Image 39')">
+                    <img src="https://lh3.googleusercontent.com/d/1Jv-bsI4f4n1sQPQwZZtuuK4eyFC0lrDo=s600" loading="lazy" decoding="async" alt="Gallery Image 39" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1MJsbWf1uIh7VVp3rOstmpQTnKLudeWkc=s1600', 'Gallery Image 40')">
+                    <img src="https://lh3.googleusercontent.com/d/1MJsbWf1uIh7VVp3rOstmpQTnKLudeWkc=s600" loading="lazy" decoding="async" alt="Gallery Image 40" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1Nah3YLN9PzIciP5YbysCVXbz-QoAuFwo', 'Gallery Image 45')">
-                    <img src="https://lh3.googleusercontent.com/d/1Nah3YLN9PzIciP5YbysCVXbz-QoAuFwo" alt="Gallery Image 45" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1tQ5Cp5BwzPEXrGdkcYJ8nG5ByFAQXkJW=s1600', 'Gallery Image 41')">
+                    <img src="https://lh3.googleusercontent.com/d/1tQ5Cp5BwzPEXrGdkcYJ8nG5ByFAQXkJW=s600" loading="lazy" decoding="async" alt="Gallery Image 41" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1FMAbmnCDqvxdym1ppDbRjacraRjQw_zY', 'Gallery Image 46')">
-                    <img src="https://lh3.googleusercontent.com/d/1FMAbmnCDqvxdym1ppDbRjacraRjQw_zY" alt="Gallery Image 46" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/125ebJ89gHdC2sUesSUhKSspYTmrqyDVw=s1600', 'Gallery Image 42')">
+                    <img src="https://lh3.googleusercontent.com/d/125ebJ89gHdC2sUesSUhKSspYTmrqyDVw=s600" loading="lazy" decoding="async" alt="Gallery Image 42" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1lZoPMAR9_uOFjiFVtsiEn9zGmlskpy0j', 'Gallery Image 47')">
-                    <img src="https://lh3.googleusercontent.com/d/1lZoPMAR9_uOFjiFVtsiEn9zGmlskpy0j" alt="Gallery Image 47" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/19WYYK5CUuiQ8lrR75JoFXscE1JWxuegZ=s1600', 'Gallery Image 43')">
+                    <img src="https://lh3.googleusercontent.com/d/19WYYK5CUuiQ8lrR75JoFXscE1JWxuegZ=s600" loading="lazy" decoding="async" alt="Gallery Image 43" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1o9PLaWa4_7XUHwXJ-cOhL2IJbvCCrCnz', 'Gallery Image 48')">
-                    <img src="https://lh3.googleusercontent.com/d/1o9PLaWa4_7XUHwXJ-cOhL2IJbvCCrCnz" alt="Gallery Image 48" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1yQUgHiCFfmCNS5IPdl9k1TVlJZPFyuLl=s1600', 'Gallery Image 44')">
+                    <img src="https://lh3.googleusercontent.com/d/1yQUgHiCFfmCNS5IPdl9k1TVlJZPFyuLl=s600" loading="lazy" decoding="async" alt="Gallery Image 44" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1EFsLhWR2N9Ud7DIAMVrdE0boz2KBojwI', 'Gallery Image 49')">
-                    <img src="https://lh3.googleusercontent.com/d/1EFsLhWR2N9Ud7DIAMVrdE0boz2KBojwI" alt="Gallery Image 49" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1Nah3YLN9PzIciP5YbysCVXbz-QoAuFwo=s1600', 'Gallery Image 45')">
+                    <img src="https://lh3.googleusercontent.com/d/1Nah3YLN9PzIciP5YbysCVXbz-QoAuFwo=s600" loading="lazy" decoding="async" alt="Gallery Image 45" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1bk69AJtt78GPiVJ_wsY1zzPqkuv9s9ur', 'Gallery Image 50')">
-                    <img src="https://lh3.googleusercontent.com/d/1bk69AJtt78GPiVJ_wsY1zzPqkuv9s9ur" alt="Gallery Image 50" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1FMAbmnCDqvxdym1ppDbRjacraRjQw_zY=s1600', 'Gallery Image 46')">
+                    <img src="https://lh3.googleusercontent.com/d/1FMAbmnCDqvxdym1ppDbRjacraRjQw_zY=s600" loading="lazy" decoding="async" alt="Gallery Image 46" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1wL-7Hoql7OKZNtgIVwMVcm8sxI9Oy1Iv', 'Gallery Image 51')">
-                    <img src="https://lh3.googleusercontent.com/d/1wL-7Hoql7OKZNtgIVwMVcm8sxI9Oy1Iv" alt="Gallery Image 51" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1lZoPMAR9_uOFjiFVtsiEn9zGmlskpy0j=s1600', 'Gallery Image 47')">
+                    <img src="https://lh3.googleusercontent.com/d/1lZoPMAR9_uOFjiFVtsiEn9zGmlskpy0j=s600" loading="lazy" decoding="async" alt="Gallery Image 47" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1aiztEXe1FYiAllJnG0XbRTp8IL5H-bQI', 'Gallery Image 52')">
-                    <img src="https://lh3.googleusercontent.com/d/1aiztEXe1FYiAllJnG0XbRTp8IL5H-bQI" alt="Gallery Image 52" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1o9PLaWa4_7XUHwXJ-cOhL2IJbvCCrCnz=s1600', 'Gallery Image 48')">
+                    <img src="https://lh3.googleusercontent.com/d/1o9PLaWa4_7XUHwXJ-cOhL2IJbvCCrCnz=s600" loading="lazy" decoding="async" alt="Gallery Image 48" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
                 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1QeGr7L8JxrtPqwpo-mBmUR6H2SRp3Kp6', 'Gallery Image 53')">
-                    <img src="https://lh3.googleusercontent.com/d/1QeGr7L8JxrtPqwpo-mBmUR6H2SRp3Kp6" alt="Gallery Image 53" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1EFsLhWR2N9Ud7DIAMVrdE0boz2KBojwI=s1600', 'Gallery Image 49')">
+                    <img src="https://lh3.googleusercontent.com/d/1EFsLhWR2N9Ud7DIAMVrdE0boz2KBojwI=s600" loading="lazy" decoding="async" alt="Gallery Image 49" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1izUh_1h4gmuvvihFZhQcXvWjLXFl1BKz', 'Gallery Image 54')">
-                    <img src="https://lh3.googleusercontent.com/d/1izUh_1h4gmuvvihFZhQcXvWjLXFl1BKz" alt="Gallery Image 54" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1bk69AJtt78GPiVJ_wsY1zzPqkuv9s9ur=s1600', 'Gallery Image 50')">
+                    <img src="https://lh3.googleusercontent.com/d/1bk69AJtt78GPiVJ_wsY1zzPqkuv9s9ur=s600" loading="lazy" decoding="async" alt="Gallery Image 50" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1pVd1-pD_EdldWP4P3JfZInKbQnZJ7wzC', 'Gallery Image 55')">
-                    <img src="https://lh3.googleusercontent.com/d/1pVd1-pD_EdldWP4P3JfZInKbQnZJ7wzC" alt="Gallery Image 55" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1wL-7Hoql7OKZNtgIVwMVcm8sxI9Oy1Iv=s1600', 'Gallery Image 51')">
+                    <img src="https://lh3.googleusercontent.com/d/1wL-7Hoql7OKZNtgIVwMVcm8sxI9Oy1Iv=s600" loading="lazy" decoding="async" alt="Gallery Image 51" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
-                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1LmCBFNg34psPy_LoV03sAhYnBpUkQECF', 'Gallery Image 56')">
-                    <img src="https://lh3.googleusercontent.com/d/1LmCBFNg34psPy_LoV03sAhYnBpUkQECF" alt="Gallery Image 56" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1aiztEXe1FYiAllJnG0XbRTp8IL5H-bQI=s1600', 'Gallery Image 52')">
+                    <img src="https://lh3.googleusercontent.com/d/1aiztEXe1FYiAllJnG0XbRTp8IL5H-bQI=s600" loading="lazy" decoding="async" alt="Gallery Image 52" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1QeGr7L8JxrtPqwpo-mBmUR6H2SRp3Kp6=s1600', 'Gallery Image 53')">
+                    <img src="https://lh3.googleusercontent.com/d/1QeGr7L8JxrtPqwpo-mBmUR6H2SRp3Kp6=s600" loading="lazy" decoding="async" alt="Gallery Image 53" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-secondary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1izUh_1h4gmuvvihFZhQcXvWjLXFl1BKz=s1600', 'Gallery Image 54')">
+                    <img src="https://lh3.googleusercontent.com/d/1izUh_1h4gmuvvihFZhQcXvWjLXFl1BKz=s600" loading="lazy" decoding="async" alt="Gallery Image 54" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1pVd1-pD_EdldWP4P3JfZInKbQnZJ7wzC=s1600', 'Gallery Image 55')">
+                    <img src="https://lh3.googleusercontent.com/d/1pVd1-pD_EdldWP4P3JfZInKbQnZJ7wzC=s600" loading="lazy" decoding="async" alt="Gallery Image 55" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer" 
+                    onclick="openLightbox('https://lh3.googleusercontent.com/d/1LmCBFNg34psPy_LoV03sAhYnBpUkQECF=s1600', 'Gallery Image 56')">
+                    <img src="https://lh3.googleusercontent.com/d/1LmCBFNg34psPy_LoV03sAhYnBpUkQECF=s600" loading="lazy" decoding="async" alt="Gallery Image 56" class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gray-600/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-search-plus text-white text-3xl"></i></div>
                 </div>
 
@@ -473,7 +488,7 @@
 
 <div id="lightbox-modal" class="fixed inset-0 hidden items-center justify-center bg-black/90 transition-opacity p-4" onclick="closeLightbox()">
     <div class="max-w-6xl max-h-[90vh] w-full" onclick="event.stopPropagation()">
-        <button class="absolute top-4 right-4 text-white text-4xl hover:text-primary transition duration-200 focus:outline-none" onclick="closeLightbox()">
+        <button aria-label="Close" class="absolute top-4 right-4 text-white text-4xl hover:text-primary transition duration-200 focus:outline-none" onclick="closeLightbox()">
             &times;
         </button>
         <img id="lightbox-image" src="" alt="Gallery Image" class="max-w-full max-h-[80vh] w-auto h-auto mx-auto rounded-lg shadow-2xl object-contain">
@@ -482,44 +497,37 @@
 </div>
 <footer class="bg-footer text-white py-10">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-            
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="space-y-4">
-                <a href="index.html" class="flex items-center space-x-2 text-white text-xl font-bold">
-                    <img 
-                        src="logo.png" 
-                        alt="Jubilee Mission College Logo" 
-                        class="w-40 h-18 object-contain rounded-full"
-                        onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/990000?text=Logo';"
-                    >
+                <a href="index.html" class="inline-block">
+                    <img src="logo.png" alt="Jubilee Mission Group of Institutions" class="h-16 w-auto object-contain">
                 </a>
                 <p class="text-sm text-gray-400">
                     Join Jubilee Mission Group of Institutions in Bangalore for quality healthcare education in BPT, Nursing, and Allied Health Sciences. Our programs combine hands-on training with a strong foundation in compassion, competence, and ethics—preparing you for a meaningful career across diverse healthcare fields. Discover your future with us.
                 </p>
                 <div class="flex space-x-4 pt-2">
-                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-facebook-f text-white"></i></a>
-                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-twitter text-white"></i></a>
-                    <a href="https://www.instagram.com/jubilee_mission_group/" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-instagram text-white"></i></a>
-                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-youtube text-white"></i></a>
+                    <a href="https://www.instagram.com/jubilee_mission_group/" target="_blank" rel="noopener" aria-label="Instagram" class="w-8 h-8 flex items-center justify-center bg-primary rounded-full hover:bg-red-700 transition duration-300"><i class="fab fa-instagram text-white"></i></a>
                 </div>
             </div>
 
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">STUDENT HELP</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="courses.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
-                    <li><a href="contact.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CONTACT US</a></li>
-                    <li><a href="about_institution.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
-                    <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
+                    <li><a href="courses.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> COURSES</a></li>
+                    <li><a href="contact_us.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ADMISSIONS &amp; CONTACT</a></li>
+                    <li><a href="about_institution.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> ABOUT INSTITUTION</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> CAMPUS</a></li>
+                    <li><a href="gallery.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> GALLERY</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">QUICK LINKS</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
-                    <li><a href="campus.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
-                    <li><a href="hospitals.html" class="text-gray-400 hover:text-primary transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSPITALS</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIBRARY</a></li>
+                    <li><a href="campus.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> HOSTEL</a></li>
+                    <li><a href="https://samuelduraivel.github.io/livestream/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> LIVE CLASS</a></li>
+                    <li><a href="privacy.html" class="text-gray-400 hover:text-white transition duration-200 flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> PRIVACY POLICY</a></li>
                 </ul>
             </div>
 
@@ -527,41 +535,29 @@
                 <h3 class="text-lg font-semibold mb-4 border-b-2 border-primary pb-1 inline-block">CONTACT US</h3>
                 <div class="space-y-4 text-sm text-gray-400">
                     <div class="flex items-start">
-                        <i class="fas fa-map-marker-alt text-primary mt-1 mr-3 flex-shrink-0"></i>
+                        <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-3 flex-shrink-0"></i>
                         <p>#81, 3rd Cross, Near Fortis Hospital, Nagarbhavi, Bangalore - 560072</p>
                     </div>
                     <div class="flex items-center">
-                        <i class="fas fa-phone text-primary mr-3"></i>
-                        <p>+91 9998643333</p>
+                        <i class="fas fa-phone text-red-500 mr-3"></i>
+                        <a href="tel:+919998643333" class="hover:text-white">+91 9998643333</a>
                     </div>
                     <div class="flex items-center">
-                        <i class="fas fa-envelope text-primary mr-3"></i>
-                        <p>jubileem123@gmail.com</p>
+                        <i class="fas fa-envelope text-red-500 mr-3"></i>
+                        <a href="mailto:jubileem123@gmail.com" class="hover:text-white break-all">jubileem123@gmail.com</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
-            <p>&copy; Copyright Jubilee 2025. All rights reserved.
-                <span class="ml-4 pl-4 border-l border-gray-700">Developed by Neocx Innovative Educations Private Limited</span>
-                <span class="ml-4 pl-4 border-l border-gray-700"><a href="privacy.html" class="hover:text-primary transition duration-200">Privacy Policy</a></span>
-            </p>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-sm text-gray-300 flex flex-col md:flex-row md:justify-center items-center gap-2 md:gap-0 md:divide-x md:divide-gray-700 text-center">
+            <p class="md:px-4">&copy; Copyright Jubilee 2025. All rights reserved.</p>
+            <p class="md:px-4">Developed by Neocx Innovative Educations Private Limited</p>
+            <p class="md:px-4"><a href="privacy.html" class="hover:text-white transition duration-200">Privacy Policy</a></p>
         </div>
     </div>
 </footer>
 <script>
-    // Mobile Menu Toggle
-    document.getElementById('mobile-menu-button').addEventListener('click', function () {
-        const menu = document.getElementById('mobile-menu');
-        if (menu.classList.contains('max-h-0')) {
-            menu.classList.remove('max-h-0');
-            menu.classList.add('max-h-screen');
-        } else {
-            menu.classList.remove('max-h-screen');
-            menu.classList.add('max-h-0');
-        }
-    });
 
     // Lightbox Functions
     const lightboxModal = document.getElementById('lightbox-modal');
@@ -574,6 +570,8 @@
         lightboxModal.classList.add('show');
     }
 
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
     function closeLightbox() {
         lightboxModal.classList.remove('show');
         // Clear content when closing for accessibility/performance
@@ -584,5 +582,13 @@
     }
 </script>
 
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        const open = menu.classList.toggle('max-h-screen');
+        menu.classList.toggle('max-h-0', !open);
+        this.setAttribute('aria-expanded', open);
+    });
+</script>
 </body>
 </html>
